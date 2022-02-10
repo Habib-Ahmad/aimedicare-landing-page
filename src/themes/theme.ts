@@ -3,6 +3,11 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
 	typography: {
 		fontFamily: "'Poppins', 'sans-serif'",
+		h1: {
+			textTransform: 'uppercase',
+			fontSize: '3rem',
+			fontWeight: 700
+		},
 		button: {
 			fontWeight: 700
 		}
@@ -29,6 +34,15 @@ export const theme = createTheme({
 				sizeMedium: {
 					width: 150
 				}
+			},
+			defaultProps: {
+				disableRipple: true
+			}
+		},
+
+		MuiIconButton: {
+			defaultProps: {
+				disableRipple: true
 			}
 		}
 	}

@@ -3,7 +3,14 @@ import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles((theme: Theme) => ({
 	navbar: {
-		padding: theme.spacing(0, 3)
+		padding: theme.spacing(0, 8),
+		backgroundColor: 'transparent',
+		position: 'fixed',
+		top: 0,
+
+		'&>.MuiGrid-root>.MuiButton-text': {
+			textShadow: '2px 2px 4px rgba(0,0,0,1)'
+		}
 	},
 	logo: {
 		backgroundColor: '#fff',
@@ -19,13 +26,13 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			fontSize: '1.5rem'
 		}
 	},
-	btnWrapper: {
-		display: 'flex',
-		justifyContent: 'flex-end',
+	menu: {
+		'&.MuiIconButton-root': {
+			display: 'none',
 
-		'&>.MuiButton-root': {
-			width: '25%',
-			maxWidth: 150
+			[theme.breakpoints.down('md')]: {
+				display: 'flex'
+			}
 		}
 	}
 }));
