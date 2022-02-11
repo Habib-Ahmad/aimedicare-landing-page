@@ -15,14 +15,14 @@ const NavBar = () => {
 
 	return (
 		<Grid container className={classes.navbar}>
-			<Grid item xs={8} sm={3} sx={{ display: 'flex', alignItems: 'center' }}>
+			<Grid item xs={10} sm={5} sx={{ display: 'flex', alignItems: 'center' }}>
 				<img src={logo} alt="aiMedicare" className={classes.logo} />
 				<Typography className={classes.logoText}>AiMedicare</Typography>
 			</Grid>
 			<Grid
 				item
-				xs={4}
-				sm={9}
+				xs={2}
+				sm={7}
 				sx={{
 					display: 'flex',
 					alignItems: 'center',

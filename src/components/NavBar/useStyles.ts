@@ -9,7 +9,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		top: 0,
 
 		'&>.MuiGrid-root>.MuiButton-text': {
-			textShadow: '2px 2px 4px rgba(0,0,0,1)'
+			textShadow: '2px 2px 4px rgba(0,0,0,.2)'
 		}
 	},
 	logo: {

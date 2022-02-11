@@ -16,3 +16,9 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
+
+@font-face {
+	font-family: 'Copperplate';
+	src: local('CopperPlate'),
+		url(./fonts/Copperplate\ Gothic\ Bold.otf) format('opentype');
+}
