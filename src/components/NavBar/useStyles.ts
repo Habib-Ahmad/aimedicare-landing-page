@@ -7,6 +7,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		backgroundColor: 'transparent',
 		position: 'fixed',
 		top: 0,
+		zIndex: 1000,
 
 		'&>.MuiGrid-root>.MuiButton-text': {
 			textShadow: '2px 2px 4px rgba(0,0,0,.2)'
@@ -17,7 +18,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		borderBottomLeftRadius: 20,
 		borderBottomRightRadius: 20,
 		padding: 8,
-		marginRight: 15
+		marginRight: 15,
+		width: 70
 	},
 	logoText: {
 		'&.MuiTypography-root': {
@@ -34,5 +36,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
 				display: 'flex'
 			}
 		}
-	}
+	},
+	menuItems: {
+		display: 'flex',
+		alignItems: 'center'
+	},
+	drawer: {}
 }));
