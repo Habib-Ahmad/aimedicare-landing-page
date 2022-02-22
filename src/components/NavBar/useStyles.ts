@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	navbar: {
 		padding: theme.spacing(0, 8),
 		backgroundColor: 'transparent',
-		position: 'fixed',
+		position: 'absolute',
 		top: 0,
 		zIndex: 1000,
 
