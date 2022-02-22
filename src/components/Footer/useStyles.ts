@@ -56,6 +56,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	copyright: {
 		backgroundColor: '#fff',
 		textAlign: 'center',
+		padding: theme.spacing(0, 3),
 
 		'&.MuiTypography-root': {
 			color: theme.palette.primary.main

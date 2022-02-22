@@ -8,8 +8,13 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		height: '98vh',
 		backgroundSize: 'cover',
 		backgroundRepeat: 'no-repeat',
+		backgroundPosition: 'center',
 		position: 'relative',
-		imageRendering: 'crisp-edges'
+		imageRendering: 'crisp-edges',
+
+		[theme.breakpoints.down('sm')]: {
+			height: '80vh'
+		}
 	},
 	heading: {
 		'&.MuiTypography-root': {
@@ -22,6 +27,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			lineHeight: '4rem',
 
 			[theme.breakpoints.down('md')]: {
+				paddingTop: theme.spacing(30),
 				lineHeight: '2.5rem',
 				width: '80%'
 			},
@@ -33,7 +39,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	robot: {
 		position: 'absolute',
-		bottom: '-7%',
+		bottom: '-6.5%',
 		left: '3%',
 		width: 300,
 
@@ -47,16 +53,16 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		[theme.breakpoints.down('sm')]: {
 			display: 'block',
 			position: 'absolute',
-			bottom: '-6.2%',
+			bottom: '-4.8%',
 			left: '3%',
 			width: 300
 		}
 	},
 	btn: {
 		position: 'absolute',
-		bottom: '-12%',
+		bottom: '-6%',
 		right: '5%',
-		width: 150,
+		width: 200,
 		cursor: 'pointer',
 
 		[theme.breakpoints.down('sm')]: {

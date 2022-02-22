@@ -1,16 +1,17 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography, useMediaQuery } from '@mui/material';
 import { useStyles } from './useStyles';
 import iPhone from '../../../assets/features/iPhone.png';
+import iPhoneMobile from '../../../assets/features/iPhoneMobile.png';
 import dots from '../../../assets/features/dots.svg';
 import features from '../../../assets/features/features.svg';
 
 const Telemedicine = (): JSX.Element => {
 	const classes = useStyles();
+	const isDesktop = useMediaQuery('(min-width: 600px)');
 
 	return (
 		<Box id="telemedicine" className={classes.telemedicine}>
 			<img src={dots} alt="" className={classes.dots} />
-			<img src={dots} alt="" className={classes.dots2} />
 			<Typography variant="h3" className={classes.heading} data-aos="fade-up">
 				Telemedicine
 			</Typography>
@@ -18,7 +19,11 @@ const Telemedicine = (): JSX.Element => {
 			<Box className={classes.boxWrapper}>
 				<Grid container alignItems="center">
 					<Grid item xs={12} md={4} data-aos="fade-right">
-						<img src={iPhone} alt="iPhone" className={classes.iPhone} />
+						<img
+							src={isDesktop ? iPhone : iPhoneMobile}
+							alt="iPhone"
+							className={classes.iPhone}
+						/>
 					</Grid>
 					<Grid item xs={12} md={5} data-aos="fade">
 						<img src={features} alt="features" className={classes.features} />

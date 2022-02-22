@@ -22,9 +22,17 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		justifyContent: 'center'
 	},
 	robot: {
-		width: '25%'
+		width: '25%',
+
+		[theme.breakpoints.down('sm')]: {
+			width: '35%'
+		}
 	},
 	img: {
-		width: '50%'
+		width: '50%',
+
+		[theme.breakpoints.down('sm')]: {
+			width: '60%'
+		}
 	}
 }));

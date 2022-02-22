@@ -108,7 +108,7 @@ const Footer = () => {
 				</Grid>
 			</Grid>
 
-			<Typography className={classes.copyright} data-aos="fade-up">
+			<Typography className={classes.copyright}>
 				Copyright © 2021 AiMedicare | All Rights Reserved.
 			</Typography>
 		</Box>

@@ -39,9 +39,13 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		}
 	},
 	iPhone: {
-		width: '350px',
 		display: 'block',
-		margin: '-100px auto 0'
+		margin: '-100px auto 0',
+		width: 350,
+
+		[theme.breakpoints.down('sm')]: {
+			width: 280
+		}
 	},
 	text: {
 		'&.MuiTypography-root': {
@@ -51,7 +55,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	features: {
 		display: 'block',
 		margin: 'auto',
-		// width: 'clamp(300px, 60%, 600px)'
 		width: '300px'
 	},
 	dots: {
@@ -63,18 +66,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		[theme.breakpoints.down('md')]: {
 			bottom: '-3%',
 			width: '60px'
-		}
-	},
-	dots2: {
-		display: 'none',
-
-		[theme.breakpoints.down('md')]: {
-			display: 'block',
-			position: 'absolute',
-			top: '10%',
-			right: '5%',
-			width: '60px',
-			zIndex: 100
 		}
 	}
 }));
