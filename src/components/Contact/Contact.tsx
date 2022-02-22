@@ -29,7 +29,7 @@ const Contact = () => {
 	};
 
 	return (
-		<Box className={classes.contact}>
+		<Box id="contact" className={classes.contact}>
 			<Typography variant="h2">Get In Touch</Typography>
 
 			<Typography sx={{ textAlign: 'center', marginTop: 3 }}>

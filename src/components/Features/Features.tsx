@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { useStyles } from './useStyles';
 import blob from '../../assets/features/blob.svg';
+import curve from '../../assets/features/curve.svg';
 import telemedicine from '../../assets/features/telemedicine.svg';
 import appleWatch from '../../assets/features/appleWatch.svg';
 import ai from '../../assets/features/ai.svg';
@@ -9,13 +10,15 @@ import ledger from '../../assets/features/ledger.svg';
 import Telemedicine from './Telemedicine/Telemedicine';
 import TriageSystem from './TriageSystem/TriageSystem';
 import BigData from './BidData/BigData';
+import Security from './Security/Security';
 
 const Features = (): JSX.Element => {
 	const classes = useStyles();
 
 	return (
-		<Box className={classes.features}>
+		<Box id="features" className={classes.features}>
 			<img src={blob} alt="" className={classes.blob} />
+			<img src={curve} alt="" className={classes.curve} />
 			<Typography variant="h2" sx={{ marginBottom: 6 }}>
 				Features
 			</Typography>
@@ -61,6 +64,7 @@ const Features = (): JSX.Element => {
 			<Telemedicine />
 			<TriageSystem />
 			<BigData />
+			<Security />
 		</Box>
 	);
 };

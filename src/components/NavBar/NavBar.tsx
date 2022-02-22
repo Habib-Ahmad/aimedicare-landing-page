@@ -15,29 +15,25 @@ import { Menu } from '@mui/icons-material';
 const menuItems = [
 	{
 		name: 'Home',
-		to: '/'
+		to: '#home'
 	},
 	{
 		name: 'About',
-		to: '/'
+		to: '#about'
 	},
 	{
 		name: 'Features',
-		to: '/'
-	},
-	{
-		name: 'Services',
-		to: '/'
+		to: '#features'
 	},
 	{
 		name: 'Contact us',
-		to: '/'
+		to: '#contact'
 	}
 ];
 
 const renderMenuItems = () => {
 	return menuItems.map((item) => (
-		<Button key={item.name} variant="text" size="medium" href={item.to}>
+		<Button key={item.name} variant="text" href={item.to}>
 			{item.name}
 		</Button>
 	));
@@ -64,11 +60,11 @@ const NavBar = (): JSX.Element => {
 
 	return (
 		<Grid container className={classes.navbar}>
-			<Grid item xs={8} sm={5}>
+			<Grid item xs={10} md={4} className={classes.gridItem}>
 				<img src={logo} alt="aiMedicare" className={classes.logo} />
 				<Typography className={classes.logoText}>AiMedicare</Typography>
 			</Grid>
-			<Grid item xs={4} sm={7} gap={3}>
+			<Grid item xs={2} md={8} gap={3}>
 				{isDesktop && (
 					<Box className={classes.menuItems}>{renderMenuItems()}</Box>
 				)}

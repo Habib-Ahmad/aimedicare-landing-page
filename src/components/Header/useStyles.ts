@@ -57,6 +57,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		bottom: '-12%',
 		right: '5%',
 		width: 150,
+		cursor: 'pointer',
 
 		[theme.breakpoints.down('sm')]: {
 			width: 100,

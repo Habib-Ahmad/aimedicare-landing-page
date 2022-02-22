@@ -15,7 +15,16 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			}
 		}
 	},
+	imgWrapper: {
+		marginTop: theme.spacing(10),
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	robot: {
+		width: '25%'
+	},
 	img: {
-		width: 1200
+		width: '50%'
 	}
 }));

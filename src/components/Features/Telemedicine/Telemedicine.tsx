@@ -8,7 +8,7 @@ const Telemedicine = (): JSX.Element => {
 	const classes = useStyles();
 
 	return (
-		<Box className={classes.telemedicine}>
+		<Box id="telemedicine" className={classes.telemedicine}>
 			<img src={dots} alt="" className={classes.dots} />
 			<img src={dots} alt="" className={classes.dots2} />
 			<Typography variant="h3" className={classes.heading}>

@@ -6,7 +6,7 @@ const About = (): JSX.Element => {
 	const classes = useStyles();
 
 	return (
-		<Box className={classes.about}>
+		<Box id="about" className={classes.about}>
 			<img src={blob} alt="" className={classes.blob} />
 			<Typography variant="h2" sx={{ marginBottom: 2 }}>
 				About Us

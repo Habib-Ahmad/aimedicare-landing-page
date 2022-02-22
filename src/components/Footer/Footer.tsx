@@ -35,7 +35,7 @@ const links = [
 	},
 	{
 		name: 'Decentralise ledger technology',
-		to: '#ledger'
+		to: '#security'
 	}
 ];
 

@@ -6,6 +6,11 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		marginTop: theme.spacing(18),
 		position: 'relative'
 	},
+	curve: {
+		position: 'absolute',
+		objectFit: 'cover',
+		display: 'none'
+	},
 	blob: {
 		position: 'absolute',
 		right: 0,
