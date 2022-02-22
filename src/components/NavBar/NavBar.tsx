@@ -60,11 +60,17 @@ const NavBar = (): JSX.Element => {
 
 	return (
 		<Grid container className={classes.navbar}>
-			<Grid item xs={10} md={4} className={classes.gridItem}>
+			<Grid
+				item
+				xs={10}
+				md={4}
+				className={classes.gridItem}
+				data-aos="fade-down"
+			>
 				<img src={logo} alt="aiMedicare" className={classes.logo} />
 				<Typography className={classes.logoText}>AiMedicare</Typography>
 			</Grid>
-			<Grid item xs={2} md={8} gap={3}>
+			<Grid item xs={2} md={8} gap={3} data-aos="fade-down">
 				{isDesktop && (
 					<Box className={classes.menuItems}>{renderMenuItems()}</Box>
 				)}

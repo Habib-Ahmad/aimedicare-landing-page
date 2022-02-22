@@ -30,13 +30,15 @@ const Contact = () => {
 
 	return (
 		<Box id="contact" className={classes.contact}>
-			<Typography variant="h2">Get In Touch</Typography>
+			<Typography variant="h2" data-aos="fade-up">
+				Get In Touch
+			</Typography>
 
-			<Typography sx={{ textAlign: 'center', marginTop: 3 }}>
+			<Typography sx={{ textAlign: 'center', marginTop: 3 }} data-aos="fade-up">
 				Do you provide any medical services or want to partner?
 			</Typography>
 
-			<Typography sx={{ marginTop: 3, fontSize: '0.7rem' }}>
+			<Typography sx={{ marginTop: 3, fontSize: '0.7rem' }} data-aos="fade-up">
 				Fields marked with an asterisk (*) are required.
 			</Typography>
 
@@ -66,7 +68,7 @@ const Contact = () => {
 					errors,
 					isSubmitting
 				}) => (
-					<form onSubmit={handleSubmit} noValidate>
+					<form onSubmit={handleSubmit} noValidate data-aos="fade-up">
 						<Box className={classes.inputWrapper}>
 							<TextField
 								variant="outlined"

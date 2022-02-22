@@ -16,7 +16,7 @@ const Header = (): JSX.Element => {
 				className={classes.btn}
 				onClick={() => console.log('working')}
 			/>
-			<Typography variant="h1" className={classes.heading}>
+			<Typography variant="h1" className={classes.heading} data-aos="fade-up">
 				The future of medical health systems
 			</Typography>
 		</Box>

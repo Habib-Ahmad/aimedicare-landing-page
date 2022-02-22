@@ -11,13 +11,18 @@ const BigData = () => {
 		<Box className={classes.bigData}>
 			<img src={dots} alt="" className={classes.dots} />
 			<img src={blob} alt="" className={classes.blob} />
-			<Typography variant="h3">Big Data Health Analysis</Typography>
+			<Typography variant="h3" data-aos="fade-up">
+				Big Data Health Analysis
+			</Typography>
 
-			<Box sx={{ width: 'clamp(200px, 70vw, 750px)', margin: '0 auto' }}>
+			<Box
+				sx={{ width: 'clamp(200px, 70vw, 750px)', margin: '0 auto' }}
+				data-aos="fade-up"
+			>
 				<img src={bigData} alt="" className={classes.img} />
 			</Box>
 
-			<Typography className={classes.txt}>
+			<Typography className={classes.txt} data-aos="fade-up">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
 				sollicitudin purus tristique amet. Purus velit tincidunt turpis
 				phasellus dolor consectetur augue. Commodo tincidunt tempor elit,

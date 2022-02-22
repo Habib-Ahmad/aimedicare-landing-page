@@ -11,19 +11,19 @@ const Telemedicine = (): JSX.Element => {
 		<Box id="telemedicine" className={classes.telemedicine}>
 			<img src={dots} alt="" className={classes.dots} />
 			<img src={dots} alt="" className={classes.dots2} />
-			<Typography variant="h3" className={classes.heading}>
+			<Typography variant="h3" className={classes.heading} data-aos="fade-up">
 				Telemedicine
 			</Typography>
 
 			<Box className={classes.boxWrapper}>
 				<Grid container alignItems="center">
-					<Grid item xs={12} md={4}>
+					<Grid item xs={12} md={4} data-aos="fade-right">
 						<img src={iPhone} alt="iPhone" className={classes.iPhone} />
 					</Grid>
-					<Grid item xs={12} md={5}>
+					<Grid item xs={12} md={5} data-aos="fade">
 						<img src={features} alt="features" className={classes.features} />
 					</Grid>
-					<Grid item xs={12} md={3}>
+					<Grid item xs={12} md={3} data-aos="fade-left">
 						<Typography className={classes.text}>
 							Telehealth is the distribution of health-related services and
 							information via electronic information and telecommunication

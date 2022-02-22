@@ -8,10 +8,14 @@ const About = (): JSX.Element => {
 	return (
 		<Box id="about" className={classes.about}>
 			<img src={blob} alt="" className={classes.blob} />
-			<Typography variant="h2" sx={{ marginBottom: 2 }}>
+			<Typography variant="h2" sx={{ marginBottom: 2 }} data-aos="fade-up">
 				About Us
 			</Typography>
-			<Typography className={classes.body}>
+			<Typography
+				className={classes.body}
+				data-aos="fade-up"
+				data-aos-delay="150"
+			>
 				AiMedicare is building a revolutionary healthcare service delivery
 				technology across the African continent. We have improved ease of access
 				to health service through the integration of an ecosystem and tech

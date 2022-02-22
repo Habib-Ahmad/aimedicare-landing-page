@@ -45,7 +45,14 @@ const Footer = () => {
 	return (
 		<Box sx={{ marginTop: 10 }}>
 			<Grid container className={classes.footer} rowSpacing={5}>
-				<Grid item xs={12} sm={6} md={4} className={classes.gridItem}>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					md={4}
+					className={classes.gridItem}
+					data-aos="fade-up"
+				>
 					<Typography className={classes.heading}>AiMedicare</Typography>
 					<Typography className={classes.body}>
 						AiMedicare is a revolutionary healthcare service delivery company
@@ -54,7 +61,14 @@ const Footer = () => {
 					</Typography>
 				</Grid>
 
-				<Grid item xs={12} sm={6} md={4} className={classes.gridItem}>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					md={4}
+					className={classes.gridItem}
+					data-aos="fade-up"
+				>
 					<Typography className={classes.heading}>Useful Links</Typography>
 					<Box className={classes.links}>
 						{links.map((link) => (
@@ -71,7 +85,13 @@ const Footer = () => {
 					</Box>
 				</Grid>
 
-				<Grid item xs={12} md={4} className={classes.gridItem}>
+				<Grid
+					item
+					xs={12}
+					md={4}
+					className={classes.gridItem}
+					data-aos="fade-up"
+				>
 					<Typography>Subscribe to our newsletter</Typography>
 					<TextField
 						className={classes.subscribe}
@@ -88,7 +108,7 @@ const Footer = () => {
 				</Grid>
 			</Grid>
 
-			<Typography className={classes.copyright}>
+			<Typography className={classes.copyright} data-aos="fade-up">
 				Copyright © 2021 AiMedicare | All Rights Reserved.
 			</Typography>
 		</Box>

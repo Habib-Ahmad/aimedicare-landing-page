@@ -8,6 +8,7 @@ import Features from './components/Features/Features';
 import Partners from './components/Partners/Partners';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import './aos';
 
 const App = (): JSX.Element => {
 	return (

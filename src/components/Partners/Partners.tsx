@@ -19,7 +19,7 @@ const Partners = () => {
 
 	return (
 		<Box className={classes.partners}>
-			<Typography variant="h2" sx={{ marginBottom: 5 }}>
+			<Typography variant="h2" sx={{ marginBottom: 5 }} data-aos="fade-up">
 				Our Partners
 			</Typography>
 
