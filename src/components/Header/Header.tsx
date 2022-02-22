@@ -4,7 +4,7 @@ import robot from '../../assets/header/robot.png';
 import smallRobot from '../../assets/header/smallRobot.png';
 import btn from '../../assets/header/btn.svg';
 
-const Header = () => {
+const Header = (): JSX.Element => {
 	const classes = useStyles();
 	return (
 		<Box className={classes.header}>

@@ -4,7 +4,7 @@ import iPhone from '../../../assets/features/iPhone.png';
 import dots from '../../../assets/features/dots.svg';
 import features from '../../../assets/features/features.svg';
 
-const Telemedicine = () => {
+const Telemedicine = (): JSX.Element => {
 	const classes = useStyles();
 
 	return (

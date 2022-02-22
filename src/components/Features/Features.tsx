@@ -7,6 +7,8 @@ import ai from '../../assets/features/ai.svg';
 import bigData from '../../assets/features/bigData.svg';
 import ledger from '../../assets/features/ledger.svg';
 import Telemedicine from './Telemedicine/Telemedicine';
+import TriageSystem from './TriageSystem/TriageSystem';
+import BigData from './BidData/BigData';
 
 const Features = (): JSX.Element => {
 	const classes = useStyles();
@@ -57,6 +59,8 @@ const Features = (): JSX.Element => {
 			</Grid>
 
 			<Telemedicine />
+			<TriageSystem />
+			<BigData />
 		</Box>
 	);
 };

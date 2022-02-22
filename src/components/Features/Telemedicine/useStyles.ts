@@ -26,13 +26,14 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		},
 
 		[theme.breakpoints.down('md')]: {
+			padding: theme.spacing(0, 3),
 			transform: 'skew(0deg)',
 
 			'&>.MuiGrid-root': {
 				transform: 'skew(0deg)',
 
 				'&>*': {
-					marginBottom: '100px'
+					marginBottom: '50px'
 				}
 			}
 		}
@@ -50,7 +51,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	features: {
 		display: 'block',
 		margin: 'auto',
-		width: '70%'
+		// width: 'clamp(300px, 60%, 600px)'
+		width: '300px'
 	},
 	dots: {
 		position: 'absolute',
