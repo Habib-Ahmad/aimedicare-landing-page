@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import About from './components/About/About';
 import Features from './components/Features/Features';
 import Partners from './components/Partners/Partners';
+import Contact from './components/Contact/Contact';
 
 const App = (): JSX.Element => {
 	return (
@@ -16,6 +17,7 @@ const App = (): JSX.Element => {
 				<About />
 				<Features />
 				<Partners />
+				<Contact />
 			</Box>
 		</ThemeProvider>
 	);
