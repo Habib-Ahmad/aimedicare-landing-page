@@ -59,15 +59,16 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		}
 	},
 	btn: {
-		position: 'absolute',
-		bottom: '-6%',
-		right: '5%',
-		width: 200,
-		cursor: 'pointer',
+		'&.MuiIconButton-root': {
+			position: 'absolute',
+			bottom: '-15%',
+			right: '5%',
+			width: 200,
 
-		[theme.breakpoints.down('sm')]: {
-			width: 100,
-			right: '2%'
+			[theme.breakpoints.down('sm')]: {
+				width: 100,
+				right: '2%'
+			}
 		}
 	}
 }));

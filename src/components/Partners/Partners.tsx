@@ -23,7 +23,7 @@ const Partners = () => {
 				Our Partners
 			</Typography>
 
-			<Box className={classes.logoWrapper1}>
+			<Box className={classes.logoWrapper1} data-aos="fade">
 				<img src={algorizmi} alt="" />
 				<img src={nitda} alt="" />
 				<img src={mira} alt="" />
@@ -38,7 +38,7 @@ const Partners = () => {
 				<img src={ncair} alt="" />
 			</Box>
 
-			<Box className={classes.logoWrapper2}>
+			<Box className={classes.logoWrapper2} data-aos="fade">
 				<img src={miccai} alt="" />
 				<img src={fthg} alt="" />
 				<img src={primus} alt="" />
