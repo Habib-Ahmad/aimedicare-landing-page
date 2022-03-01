@@ -11,6 +11,7 @@ import Telemedicine from './Telemedicine/Telemedicine';
 import TriageSystem from './TriageSystem/TriageSystem';
 import BigData from './BigData/BigData';
 import Security from './Security/Security';
+import IOMT from './IOMT/IOMT';
 
 const Features = (): JSX.Element => {
 	const classes = useStyles();
@@ -90,6 +91,7 @@ const Features = (): JSX.Element => {
 			</Grid>
 
 			<Telemedicine />
+			<IOMT />
 			<TriageSystem />
 			<BigData />
 			<Security />
