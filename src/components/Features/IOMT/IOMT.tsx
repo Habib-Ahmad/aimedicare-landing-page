@@ -1,59 +1,75 @@
 import { useState } from 'react';
-import { Box, Grid, IconButton, Typography } from '@mui/material';
+import {
+	Box,
+	Grid,
+	IconButton,
+	Typography,
+	useMediaQuery
+} from '@mui/material';
 import { useStyles } from './useStyles';
+import Slider, { Settings } from 'react-slick';
 import watchWithStats from '../../../assets/features/watchWithStats.png';
 import watch1 from '../../../assets/features/watch1.png';
+import watch2 from '../../../assets/features/watch2.png';
+import watch3 from '../../../assets/features/watch3.png';
+import watch4 from '../../../assets/features/watch4.png';
+import watch5 from '../../../assets/features/watch5.png';
 import btn from '../../../assets/features/btn.svg';
 import active from '../../../assets/features/active.svg';
 
-const IOMT = () => {
+const NextArrow = ({ onClick }: any) => {
 	const classes = useStyles();
-	const [activeWatch, setActiveWatch] = useState<number>(0);
-	const [watches, setWatches] = useState([
-		watch1,
-		watch1,
-		watch1,
-		watch1,
-		watch1
-	]);
+	return (
+		<IconButton
+			className={`${classes.arrow} ${classes.next}`}
+			onClick={onClick}
+		>
+			<img src={btn} alt="" style={{ width: 10 }} />
+		</IconButton>
+	);
+};
 
-	const handlePrev = () => {
-		const prevWatch =
-			activeWatch - 1 >= 0 ? activeWatch - 1 : watches.length - 1;
-		setActiveWatch(prevWatch);
+const PrevArrow = ({ onClick }: any) => {
+	const classes = useStyles();
+	return (
+		<IconButton
+			className={`${classes.arrow} ${classes.prev}`}
+			onClick={onClick}
+		>
+			<img src={btn} alt="" style={{ width: 10 }} />
+		</IconButton>
+	);
+};
 
-		const newWatches = [...watches];
-		newWatches.forEach((watch, idx) => {
-			if (idx === 0) {
-				newWatches.splice(idx, 1);
-				newWatches.push(watch);
-			}
-		});
-		setWatches(newWatches);
-	};
+const IOMT = (): JSX.Element => {
+	const classes = useStyles();
+	const [imageIndex, setImageIndex] = useState(0);
 
-	const handleNext = () => {
-		const nextWatch = activeWatch + 1 < watches.length ? activeWatch + 1 : 0;
-		setActiveWatch(nextWatch);
+	const watches = [watch1, watch2, watch3, watch4, watch5];
+	const isDesktop = useMediaQuery('(min-width: 900px)');
 
-		const newWatches = [...watches];
-		newWatches.forEach((watch, idx) => {
-			if (idx === newWatches.length - 1) {
-				newWatches.splice(idx, 1);
-				newWatches.unshift(watch);
-			}
-		});
-		setWatches(newWatches);
+	const settings: Settings = {
+		infinite: true,
+		vertical: isDesktop ? true : false,
+		speed: 300,
+		slidesToShow: 3,
+		centerMode: true,
+		centerPadding: '0px',
+		nextArrow: <NextArrow />,
+		prevArrow: <PrevArrow />,
+		appendDots: () => <PrevArrow />,
+		beforeChange: (current: number, next: number) => setImageIndex(next)
 	};
 
 	return (
 		<Box className={classes.iomt}>
 			<Typography variant="h3">Internet of Medical Things</Typography>
+
 			<Grid container alignItems="center" justifyContent="center">
 				<Grid item xs={12} md={8}>
 					<Box className={classes.leftWrapper}>
 						{/* <img src={stats} alt="" style={{ width: 200 }} /> */}
-						<img src={watchWithStats} alt="" style={{ width: 700 }} />
+						<img src={watches[imageIndex]} alt="" style={{ width: 300 }} />
 						<Typography>
 							Real time monitoring of health vitals using wearable technology
 							with an option of connecting to your Doctor
@@ -61,43 +77,26 @@ const IOMT = () => {
 					</Box>
 				</Grid>
 
-				<Grid
-					container
-					item
-					xs={12}
-					md={4}
-					alignItems="center"
-					justifyContent="space-evenly"
-				>
-					<Grid item xs={12} md={2}>
-						<Box className={classes.watchWrapper}>
-							{watches.map((watch, idx) => (
-								<img
-									key={idx}
-									src={watch}
-									alt=""
-									className={
-										idx === 2
-											? classes.centerWatch
-											: idx === 1 || idx === 3
-											? classes.middleWatch
-											: classes.endWatch
-									}
-								/>
-							))}
-						</Box>
-					</Grid>
-					<Grid item xs={12} md={2}>
-						<Box className={classes.watchWrapper}>
-							<IconButton onClick={handlePrev}>
-								<img src={btn} alt="" style={{ width: 8 }} />
-							</IconButton>
-
-							<img src={active} alt="" style={{ margin: 20, width: 30 }} />
-
-							<IconButton onClick={handleNext}>
-								<img src={btn} alt="" style={{ width: 8 }} />
-							</IconButton>
+				<Grid item xs={12} md={4}>
+					<Grid item xs={12} md={10}>
+						<Box className={classes.sliderWrapper}>
+							<Slider lazyLoad="ondemand" {...settings}>
+								{watches.map((img, idx) => (
+									<div
+										key={img}
+										className={
+											idx === imageIndex
+												? `${classes.slide} ${classes.activeSlide}`
+												: classes.slide
+										}
+									>
+										<img src={img} alt={img} />
+									</div>
+								))}
+							</Slider>
+							{/* <IconButton className={classes.active}> */}
+							<img src={active} alt={active} className={classes.active} />
+							{/* </IconButton> */}
 						</Box>
 					</Grid>
 				</Grid>

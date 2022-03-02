@@ -3,7 +3,8 @@ import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles((theme: Theme) => ({
 	iomt: {
-		marginTop: theme.spacing(10)
+		marginTop: theme.spacing(10),
+		transition: 'all 2s'
 	},
 	leftWrapper: {
 		display: 'flex',
@@ -14,26 +15,59 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			flexDirection: 'column'
 		}
 	},
-	watchWrapper: {
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
+	sliderWrapper: {
+		position: 'relative',
 
 		[theme.breakpoints.down('md')]: {
-			flexDirection: 'row'
+			height: '171px'
 		}
 	},
-	endWatch: {
-		width: 30,
-		transitionDuration: '0.5s'
+	slide: {
+		transform: 'scale(0.2)',
+		transition: 'transform 300ms',
+		opacity: '0.5',
+
+		'&>img': {
+			width: '7rem',
+			margin: 'auto'
+		}
 	},
-	middleWatch: {
-		width: 80,
-		transitionDuration: '0.5s'
+	activeSlide: {
+		transform: 'scale(1)',
+		opacity: 1
 	},
-	centerWatch: {
-		width: 160,
-		transitionDuration: '0.5s'
+	arrow: {
+		'&.MuiIconButton-root': {
+			position: 'absolute',
+			zIndex: 10
+		}
+	},
+	next: {
+		right: 0,
+		bottom: '45%',
+
+		[theme.breakpoints.down('md')]: {
+			bottom: '-20%',
+			right: '38%'
+		}
+	},
+	prev: {
+		right: 0,
+		bottom: '65%',
+
+		[theme.breakpoints.down('md')]: {
+			bottom: '-20%',
+			right: '57%'
+		}
+	},
+	active: {
+		position: 'absolute',
+		right: '-2%',
+		bottom: '62%',
+
+		[theme.breakpoints.down('md')]: {
+			bottom: '-23%',
+			right: '47%'
+		}
 	}
 }));
