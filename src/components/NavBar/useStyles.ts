@@ -22,24 +22,36 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			paddingLeft: '10vw'
 		}
 	},
+	logoWrapper: {
+		display: 'flex',
+		alignItems: 'center',
+
+		[theme.breakpoints.down('md')]: {
+			flexDirection: 'column'
+		}
+	},
 	logo: {
 		backgroundColor: '#fff',
-		borderBottomLeftRadius: 20,
-		borderBottomRightRadius: 20,
-		padding: 8,
+		borderBottomLeftRadius: '2vw',
+		borderBottomRightRadius: '2vw',
+		padding: '15px 10px',
 		marginRight: 15,
-		width: 70,
+		width: '7vw',
+		maxWidth: 150,
+		minWidth: 90,
 
 		[theme.breakpoints.down('md')]: {
 			margin: ' 0 auto',
-			display: 'block'
+			display: 'block',
+			borderBottomLeftRadius: '5vw',
+			borderBottomRightRadius: '5vw'
 		}
 	},
 	logoText: {
 		'&.MuiTypography-root': {
 			color: '#fff',
 			fontWeight: 700,
-			fontSize: '1.5rem',
+			fontSize: 'clamp(1.2rem, 1vw, 4rem)',
 
 			[theme.breakpoints.down('md')]: {
 				textAlign: 'center'
@@ -60,10 +72,16 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'flex-end',
+		height: '100%',
 
 		'&>.MuiButton-root': {
-			width: 120,
-			textTransform: 'none'
+			flex: 1,
+			textTransform: 'none',
+			fontSize: '1rem',
+
+			[theme.breakpoints.up('xl')]: {
+				fontSize: '2rem'
+			}
 		}
 	},
 	drawer: {
@@ -74,7 +92,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 				color: theme.palette.primary.main,
 				textTransform: 'none',
 				margin: '8px 0',
-				width: 140
+				width: 140,
+				zIndex: 200
 			}
 		}
 	}

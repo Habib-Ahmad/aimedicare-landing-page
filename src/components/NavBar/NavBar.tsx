@@ -31,14 +31,6 @@ const menuItems = [
 	}
 ];
 
-const renderMenuItems = () => {
-	return menuItems.map((item) => (
-		<Button key={item.name} variant="text" href={item.to}>
-			{item.name}
-		</Button>
-	));
-};
-
 const NavBar = (): JSX.Element => {
 	const classes = useStyles();
 	const [displayDrawer, setDisplayDrawer] = useState(false);
@@ -58,19 +50,34 @@ const NavBar = (): JSX.Element => {
 			setDisplayDrawer(open);
 		};
 
+	const renderMenuItems = () => {
+		return menuItems.map((item) => (
+			<Button
+				key={item.name}
+				variant="text"
+				href={item.to}
+				onClick={toggleDrawer(false)}
+			>
+				{item.name}
+			</Button>
+		));
+	};
+
 	return (
 		<Grid container className={classes.navbar}>
 			<Grid
 				item
 				xs={10}
-				md={4}
+				md={6}
 				className={classes.gridItem}
-				data-aos="fade-down"
+				// data-aos="fade-down"
 			>
-				<img src={logo} alt="aiMedicare" className={classes.logo} />
-				<Typography className={classes.logoText}>AiMedicare</Typography>
+				<Box className={classes.logoWrapper}>
+					<img src={logo} alt="aiMedicare" className={classes.logo} />
+					<Typography className={classes.logoText}>AiMedicare</Typography>
+				</Box>
 			</Grid>
-			<Grid item xs={2} md={8} gap={3} data-aos="fade-down">
+			<Grid item xs={2} md={6} gap={3}>
 				{isDesktop && (
 					<Box className={classes.menuItems}>{renderMenuItems()}</Box>
 				)}
