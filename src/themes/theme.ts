@@ -1,7 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import { createBreakpoints } from '@mui/system';
-
-const breakpoints = createBreakpoints({});
 
 export const theme = createTheme({
 	typography: {
@@ -36,20 +33,12 @@ export const theme = createTheme({
 
 		h3: {
 			fontFamily: "'Copperplate'",
-			fontSize: '1.3rem',
+			fontSize: 'clamp(1rem, 2vw, 2.3rem)',
 			textAlign: 'center',
 			textTransform: 'lowercase',
 
 			'&::first-letter': {
-				fontSize: '1.7rem'
-			},
-
-			[breakpoints.down('md')]: {
-				fontSize: '1.1rem',
-
-				'&::first-letter': {
-					fontSize: '1.4rem'
-				}
+				fontSize: 'clamp(1.5rem, 2.2vw, 2.7rem)'
 			}
 		},
 

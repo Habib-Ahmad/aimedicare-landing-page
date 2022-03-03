@@ -13,8 +13,8 @@ const About = (): JSX.Element => {
 			</Typography>
 			<Typography
 				className={classes.body}
-				// data-aos="fade-up"
-				// data-aos-delay="150"
+				data-aos="fade-up"
+				data-aos-delay="150"
 			>
 				AiMedicare is building a revolutionary healthcare service delivery
 				technology across the African continent. We have improved ease of access

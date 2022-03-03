@@ -41,7 +41,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			color: '#666666',
 			marginTop: theme.spacing(5),
 			padding: '0 10vw',
-			fontSize: '1.2rem',
 
 			[theme.breakpoints.down('sm')]: {
 				fontSize: '0.875rem'

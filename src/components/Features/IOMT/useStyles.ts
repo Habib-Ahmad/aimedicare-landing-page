@@ -4,15 +4,66 @@ import { makeStyles } from '@mui/styles';
 export const useStyles = makeStyles((theme: Theme) => ({
 	iomt: {
 		marginTop: theme.spacing(10),
-		transition: 'all 2s'
+		padding: '0 5vw',
+
+		[theme.breakpoints.up('xl')]: {
+			marginBottom: theme.spacing(50)
+		}
 	},
-	leftWrapper: {
+	watchWrapper: {
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'flex-start',
+		position: 'relative',
+		width: '90%',
 
 		[theme.breakpoints.down('md')]: {
 			flexDirection: 'column'
+		}
+	},
+	stats: {
+		position: 'absolute',
+		width: 250,
+		top: 0,
+		left: '17%',
+		zIndex: 100,
+
+		[theme.breakpoints.up('xl')]: {
+			width: 450
+		},
+
+		[theme.breakpoints.down('md')]: {
+			left: '15vw'
+		},
+
+		[theme.breakpoints.down('sm')]: {
+			width: 200,
+			left: '8%'
+		}
+	},
+	watch: {
+		position: 'absolute',
+		width: 300,
+		top: 0,
+		left: '50%',
+
+		[theme.breakpoints.up('xl')]: {
+			width: 500
+		},
+
+		[theme.breakpoints.down('sm')]: {
+			width: 200
+		}
+	},
+	text: {
+		'&.MuiTypography-root': {
+			[theme.breakpoints.down('md')]: {
+				margin: '500px 0 20px',
+				textAlign: 'center'
+			},
+			[theme.breakpoints.down('sm')]: {
+				marginTop: '350px'
+			}
 		}
 	},
 	sliderWrapper: {
@@ -28,8 +79,16 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		opacity: '0.5',
 
 		'&>img': {
-			width: '7rem',
-			margin: 'auto'
+			width: '6rem',
+			margin: 'auto',
+
+			[theme.breakpoints.up('xl')]: {
+				width: '10rem'
+			},
+
+			[theme.breakpoints.down('md')]: {
+				width: '4rem'
+			}
 		}
 	},
 	activeSlide: {
@@ -47,7 +106,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		bottom: '45%',
 
 		[theme.breakpoints.down('md')]: {
-			bottom: '-20%',
+			bottom: '-40%',
 			right: '38%'
 		}
 	},
@@ -56,17 +115,18 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		bottom: '65%',
 
 		[theme.breakpoints.down('md')]: {
-			bottom: '-20%',
+			bottom: '-40%',
 			right: '57%'
 		}
 	},
 	active: {
 		position: 'absolute',
-		right: '-2%',
-		bottom: '62%',
+		right: '-1%',
+		bottom: '54%',
+		width: 30,
 
 		[theme.breakpoints.down('md')]: {
-			bottom: '-23%',
+			bottom: '15%',
 			right: '47%'
 		}
 	}

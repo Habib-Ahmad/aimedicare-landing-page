@@ -22,12 +22,13 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		placeItems: 'center',
 
 		'&>img': {
-			width: 120
+			width: '10vw',
+			minWidth: 120
 		},
 
 		'&>.MuiTypography-root': {
 			fontWeight: 600,
-			fontSize: '0.875rem',
+			fontSize: 'clamp(0.875rem, 1vw, 1.5rem)',
 			marginTop: theme.spacing(),
 			color: '#676868',
 			textAlign: 'center'

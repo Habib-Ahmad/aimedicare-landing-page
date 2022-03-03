@@ -41,7 +41,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	iPhone: {
 		display: 'block',
 		margin: '-100px auto 0',
-		width: 350,
 
 		[theme.breakpoints.down('sm')]: {
 			width: 280
@@ -49,13 +48,15 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	text: {
 		'&.MuiTypography-root': {
-			color: '#fff'
+			color: '#fff',
+			fontSize: 'clamp(0.875rem, 1.5vw, 2.5rem)',
+			lineHeight: 'clamp(2rem, 2.7vw, 4rem)'
 		}
 	},
 	features: {
 		display: 'block',
 		margin: 'auto',
-		width: '300px'
+		width: 'clamp(300px, 25vw, 900px)'
 	},
 	dots: {
 		position: 'absolute',

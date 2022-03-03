@@ -17,8 +17,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	txt: {
 		'&.MuiTypography-root': {
-			fontSize: '1.3rem',
 			fontWeight: 200,
+			textAlign: 'center',
 
 			[theme.breakpoints.down('md')]: {
 				fontSize: '0.875rem'

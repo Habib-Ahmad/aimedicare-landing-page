@@ -25,8 +25,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		overflow: 'hidden',
 		display: 'flex',
 		height: 'auto',
-		marginLeft: '-1500px',
-		width: '-1500px',
+		// marginRight: '1500px',
+		width: '1500px',
 		margin: theme.spacing(5, 'auto'),
 
 		'&>img': {
@@ -47,10 +47,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	'@keyframes slideRight': {
 		'0%': {
-			transform: 'translate3d(0, 0, 0)'
+			transform: 'translate3d(-1500px, 0, 0)'
 		},
 		'100%': {
-			transform: 'translate3d(1500px, 0, 0)'
+			transform: 'translate3d(0, 0, 0)'
 		}
 	}
 }));

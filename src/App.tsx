@@ -17,7 +17,7 @@ const App = (): JSX.Element => {
 			<Header />
 			<Box sx={{ backgroundColor: '#f2ffff' }}>
 				<About />
-				{/* <Features /> */}
+				<Features />
 				<Partners />
 				<Contact />
 				<Footer />
