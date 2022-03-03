@@ -70,14 +70,14 @@ const NavBar = (): JSX.Element => {
 				xs={10}
 				md={6}
 				className={classes.gridItem}
-				// data-aos="fade-down"
+				data-aos="fade-down"
 			>
 				<Box className={classes.logoWrapper}>
 					<img src={logo} alt="aiMedicare" className={classes.logo} />
 					<Typography className={classes.logoText}>AiMedicare</Typography>
 				</Box>
 			</Grid>
-			<Grid item xs={2} md={6} gap={3}>
+			<Grid item xs={2} md={6} gap={3} data-aos="fade-down">
 				{isDesktop && (
 					<Box className={classes.menuItems}>{renderMenuItems()}</Box>
 				)}

@@ -6,6 +6,11 @@ const breakpoints = createBreakpoints({});
 export const theme = createTheme({
 	typography: {
 		fontFamily: "'Poppins', 'sans-serif'",
+
+		allVariants: {
+			fontSize: 'clamp(0.875rem, 1.2vw, 2rem)'
+		},
+
 		h1: {
 			fontFamily: "'Copperplate'",
 			textTransform: 'uppercase',
@@ -20,20 +25,12 @@ export const theme = createTheme({
 
 		h2: {
 			fontFamily: "'Copperplate'",
-			fontSize: '1.6rem',
+			fontSize: 'clamp(1.2rem, 2vw, 3rem)',
 			textAlign: 'center',
 			textTransform: 'lowercase',
 
 			'&::first-letter': {
-				fontSize: '2rem'
-			},
-
-			[breakpoints.down('md')]: {
-				fontSize: '1.3rem',
-
-				'&::first-letter': {
-					fontSize: '1.6rem'
-				}
+				fontSize: 'clamp(1.5rem, 2.2vw, 3.5rem)'
 			}
 		},
 

@@ -76,7 +76,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			display: 'block',
 			position: 'absolute',
 			bottom: '-7%',
-			left: 0,
+			left: '-4%',
 			width: 250
 		}
 	},
@@ -87,7 +87,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			display: 'block',
 			position: 'absolute',
 			bottom: '13%',
-			left: '40%'
+			left: '35%'
 		}
 	},
 	btn: {
