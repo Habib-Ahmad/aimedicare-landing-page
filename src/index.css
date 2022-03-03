@@ -4,6 +4,11 @@
 * {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
 
 body {
@@ -25,4 +30,10 @@ code {
 	font-family: 'Copperplate';
 	src: local('CopperPlate'),
 		url(./fonts/Copperplate\ Gothic\ Bold.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'CopperplateMedium';
+	src: local('CopperPlateMedium'),
+		url(./fonts/Copperplate-Gothic-Medium.ttf) format('opentype');
 }

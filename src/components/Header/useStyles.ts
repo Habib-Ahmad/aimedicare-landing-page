@@ -5,12 +5,17 @@ import background from '../../assets/header/background.png';
 export const useStyles = makeStyles((theme: Theme) => ({
 	header: {
 		backgroundImage: `url(${background})`,
+		backgroundColor: '#0b7778',
 		height: '98vh',
-		backgroundSize: 'cover',
+		backgroundSize: 'contain',
 		backgroundRepeat: 'no-repeat',
-		backgroundPosition: 'center',
+		backgroundPosition: 'right',
 		position: 'relative',
-		imageRendering: 'crisp-edges',
+		padding: '0 5vw',
+
+		[theme.breakpoints.down('md')]: {
+			backgroundSize: 'cover'
+		},
 
 		[theme.breakpoints.down('sm')]: {
 			height: '80vh'
@@ -18,30 +23,47 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	heading: {
 		'&.MuiTypography-root': {
-			paddingTop: theme.spacing(17),
-			paddingLeft: '5vw',
-			paddingRight: '5vw',
-			width: '60%',
 			color: '#fff',
 			textShadow: '2px 2px 10px rgba(0,0,0,.2)',
-			lineHeight: '4rem',
+			textAlign: 'center',
+			paddingTop: '12vw',
 
 			[theme.breakpoints.down('md')]: {
-				paddingTop: theme.spacing(30),
-				lineHeight: '2.5rem',
-				width: '80%'
+				paddingTop: '20vw',
+				lineHeight: '2rem'
 			},
 
 			[theme.breakpoints.down('sm')]: {
-				width: '100%'
+				paddingTop: '40vw'
 			}
+		}
+	},
+	subHeading: {
+		'&.MuiTypography-root': {
+			color: '#fff',
+			textAlign: 'center',
+			fontSize: 'clamp(1rem, 1vw, 3rem)',
+			fontFamily: "'CopperplateMedium'",
+			fontWeight: '600',
+			textTransform: 'uppercase',
+			letterSpacing: '1px',
+			marginTop: theme.spacing(3)
 		}
 	},
 	robot: {
 		position: 'absolute',
-		bottom: '-6.5%',
-		left: '3%',
-		width: 300,
+		bottom: '-11.5%',
+		left: '5%',
+
+		[theme.breakpoints.down('sm')]: {
+			display: 'none'
+		}
+	},
+	dialog: {
+		position: 'absolute',
+		bottom: '25%',
+		left: '15%',
+		width: 'clamp(100px, 15vw, 400px)',
 
 		[theme.breakpoints.down('sm')]: {
 			display: 'none'
@@ -53,9 +75,19 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		[theme.breakpoints.down('sm')]: {
 			display: 'block',
 			position: 'absolute',
-			bottom: '-4.8%',
-			left: '3%',
-			width: 300
+			bottom: '-7%',
+			left: 0,
+			width: 250
+		}
+	},
+	smallDialog: {
+		display: 'none',
+
+		[theme.breakpoints.down('sm')]: {
+			display: 'block',
+			position: 'absolute',
+			bottom: '13%',
+			left: '40%'
 		}
 	},
 	btn: {
@@ -67,7 +99,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
 			[theme.breakpoints.down('sm')]: {
 				width: 100,
-				right: '2%'
+				right: '2%',
+				bottom: '-8%'
 			}
 		}
 	}

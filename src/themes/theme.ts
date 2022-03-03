@@ -9,19 +9,12 @@ export const theme = createTheme({
 		h1: {
 			fontFamily: "'Copperplate'",
 			textTransform: 'uppercase',
-			fontSize: '2rem',
+			fontSize: 'clamp(1.2rem, 2vw, 4rem)',
 			fontWeight: 700,
+			letterSpacing: '2px',
 
 			'&::first-letter': {
-				fontSize: '2.5rem'
-			},
-
-			[breakpoints.down('md')]: {
-				fontSize: '1.5rem',
-
-				'&::first-letter': {
-					fontSize: '1.8rem'
-				}
+				fontSize: 'clamp(1.5rem, 2.5vw, 4.2rem)'
 			}
 		},
 
