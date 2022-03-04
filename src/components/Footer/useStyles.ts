@@ -26,13 +26,11 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		'&.MuiTypography-root': {
 			fontSize: '1.2rem',
 			fontWeight: '600',
-			marginBottom: theme.spacing(2)
-		}
-	},
-	body: {
-		'&.MuiTypography-root': {
-			fontSize: '0.8rem',
-			fontWeight: '300'
+			marginBottom: theme.spacing(2),
+
+			[theme.breakpoints.up('xl')]: {
+				fontSize: '2.4rem'
+			}
 		}
 	},
 	links: {
@@ -42,6 +40,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		flexWrap: 'wrap',
 		height: 150,
 
+		[theme.breakpoints.up('xl')]: {
+			height: 250
+		},
+
 		[theme.breakpoints.down('md')]: {
 			height: 'auto'
 		}
@@ -50,7 +52,11 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		'&.MuiButton-root': {
 			textTransform: 'none',
 			fontWeight: 300,
-			fontSize: '0.8rem'
+			fontSize: '0.8rem',
+
+			[theme.breakpoints.up('xl')]: {
+				fontSize: '1.8rem'
+			}
 		}
 	},
 	copyright: {
@@ -78,7 +84,14 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			backgroundColor: '#fff',
 			paddingRight: 0,
 			maxWidth: 500,
-			fontSize: '0.875rem'
+			fontSize: '0.875rem',
+
+			[theme.breakpoints.up('xl')]: {
+				height: 80,
+				maxWidth: 700,
+				borderRadius: 50,
+				fontSize: '1.5rem'
+			}
 		}
 	},
 	subscribeBtn: {
@@ -88,7 +101,13 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			boxShadow: '-2px 0px 4px rgba(0,0,0,.1)',
 			width: 120,
 			height: 40,
-			fontWeight: 600
+			fontWeight: 600,
+
+			[theme.breakpoints.up('xl')]: {
+				height: 80,
+				width: 240,
+				borderRadius: 50
+			}
 		}
 	}
 }));

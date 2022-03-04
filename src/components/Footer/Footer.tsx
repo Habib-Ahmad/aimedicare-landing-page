@@ -43,7 +43,7 @@ const Footer = () => {
 	const classes = useStyles();
 
 	return (
-		<Box sx={{ marginTop: 10 }}>
+		<Box sx={{ marginTop: 20 }}>
 			<Grid container className={classes.footer} rowSpacing={5}>
 				<Grid
 					item
@@ -54,7 +54,7 @@ const Footer = () => {
 					data-aos="fade-up"
 				>
 					<Typography className={classes.heading}>AiMedicare</Typography>
-					<Typography className={classes.body}>
+					<Typography>
 						AiMedicare is a revolutionary healthcare service delivery company
 						that uses IOMT, AI, Big data Health analytics, and DLT for patient
 						tailored solutions.

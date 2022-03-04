@@ -3,7 +3,7 @@ import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles((theme: Theme) => ({
 	security: {
-		marginTop: theme.spacing(10)
+		marginTop: theme.spacing(25)
 	},
 	txtWrapper: {
 		backgroundColor: '#2390a2',

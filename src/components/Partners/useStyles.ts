@@ -3,7 +3,7 @@ import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles((theme: Theme) => ({
 	partners: {
-		marginTop: theme.spacing(15),
+		marginTop: theme.spacing(25),
 		overflow: 'hidden'
 	},
 	logoWrapper1: {

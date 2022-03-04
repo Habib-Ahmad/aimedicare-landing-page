@@ -3,7 +3,7 @@ import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles((theme: Theme) => ({
 	contact: {
-		marginTop: theme.spacing(8),
+		marginTop: theme.spacing(25),
 		padding: theme.spacing(0, 40),
 
 		[theme.breakpoints.up('xl')]: {
