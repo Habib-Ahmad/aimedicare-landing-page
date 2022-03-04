@@ -15,7 +15,7 @@ const BigData = () => {
 				Big Data Health Analysis
 			</Typography>
 
-			<Box>
+			<Box data-aos="fade-up">
 				<img src={bigData} alt="" className={classes.img} />
 			</Box>
 

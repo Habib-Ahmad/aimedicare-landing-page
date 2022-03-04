@@ -6,6 +6,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		marginTop: theme.spacing(8),
 		padding: theme.spacing(0, 40),
 
+		[theme.breakpoints.up('xl')]: {
+			padding: theme.spacing(0, 90)
+		},
+
 		[theme.breakpoints.down('lg')]: {
 			padding: theme.spacing(0, 20)
 		},
@@ -21,6 +25,25 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
 		[theme.breakpoints.down('md')]: {
 			flexDirection: 'column'
+		}
+	},
+	txt: {
+		'&.MuiTypography-root': {
+			marginTop: theme.spacing(3),
+			fontSize: 'clamp(0.7rem, 1vw, 1rem)',
+
+			[theme.breakpoints.up('xl')]: {
+				fontSize: '1.3rem'
+			}
+		}
+	},
+	btn: {
+		'&.MuiButton-root': {
+			[theme.breakpoints.up('xl')]: {
+				width: 200,
+				height: 80,
+				fontSize: '1.5rem'
+			}
 		}
 	}
 }));

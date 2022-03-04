@@ -23,10 +23,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		left: 0,
 		top: '25%',
 		width: '25%',
-		zIndex: -100,
 
 		[theme.breakpoints.down('md')]: {
-			top: '25%'
+			top: '20%'
 		}
 	},
 
@@ -34,6 +33,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		display: 'block',
 		margin: theme.spacing(0, 'auto'),
 		width: 700,
+		zIndex: 100,
 
 		[theme.breakpoints.up('xl')]: {
 			width: 1291

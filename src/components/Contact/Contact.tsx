@@ -38,7 +38,7 @@ const Contact = () => {
 				Do you provide any medical services or want to partner?
 			</Typography>
 
-			<Typography sx={{ marginTop: 3, fontSize: '0.7rem' }} data-aos="fade-up">
+			<Typography className={classes.txt} data-aos="fade-up">
 				Fields marked with an asterisk (*) are required.
 			</Typography>
 
@@ -145,6 +145,7 @@ const Contact = () => {
 								margin: '10px auto 10px 0',
 								height: '40px'
 							}}
+							className={classes.btn}
 						>
 							{isSubmitting ? (
 								<CircularProgress sx={{ width: '20px', color: 'white' }} />
