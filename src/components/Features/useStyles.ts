@@ -14,8 +14,14 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	blob: {
 		position: 'absolute',
 		right: 0,
-		top: '15%',
+		top: '5%',
 		width: '25%'
+	},
+	triageBlob1: {
+		position: 'absolute',
+		right: 0,
+		top: '43%',
+		width: '15vw'
 	},
 	feature: {
 		display: 'grid',

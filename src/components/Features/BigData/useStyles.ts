@@ -23,17 +23,25 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		left: 0,
 		top: '25%',
 		width: '25%',
+		zIndex: -100,
 
 		[theme.breakpoints.down('md')]: {
-			top: '5%'
+			top: '25%'
 		}
 	},
 
 	img: {
 		display: 'block',
 		margin: theme.spacing(0, 'auto'),
-		width: '100%',
-		objectFit: 'cover'
+		width: 700,
+
+		[theme.breakpoints.up('xl')]: {
+			width: 1291
+		},
+
+		[theme.breakpoints.down('sm')]: {
+			width: 400
+		}
 	},
 
 	txt: {

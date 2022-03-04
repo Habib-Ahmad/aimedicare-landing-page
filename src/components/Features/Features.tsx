@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { useStyles } from './useStyles';
 import blob from '../../assets/features/blob.svg';
-import curve from '../../assets/features/curve.svg';
+import triageBlob from '../../assets/features/triageBlob.svg';
 import telemedicine from '../../assets/features/telemedicine.svg';
 import appleWatch from '../../assets/features/appleWatch.svg';
 import ai from '../../assets/features/ai.svg';
@@ -19,7 +19,8 @@ const Features = (): JSX.Element => {
 	return (
 		<Box id="features" className={classes.features}>
 			<img src={blob} alt="" className={classes.blob} />
-			<img src={curve} alt="" className={classes.curve} />
+			<img src={triageBlob} alt="" className={classes.triageBlob1} />
+
 			<Typography variant="h2" sx={{ marginBottom: 6 }} data-aos="fade-up">
 				Features
 			</Typography>

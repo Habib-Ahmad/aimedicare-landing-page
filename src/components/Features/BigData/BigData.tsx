@@ -15,10 +15,7 @@ const BigData = () => {
 				Big Data Health Analysis
 			</Typography>
 
-			<Box
-				sx={{ width: 'clamp(200px, 70vw, 750px)', margin: '0 auto' }}
-				data-aos="fade-up"
-			>
+			<Box>
 				<img src={bigData} alt="" className={classes.img} />
 			</Box>
 
