@@ -83,7 +83,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			margin: 'auto',
 
 			[theme.breakpoints.up('xl')]: {
-				width: '10rem'
+				width: '12rem'
 			},
 
 			[theme.breakpoints.down('md')]: {
@@ -99,6 +99,14 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		'&.MuiIconButton-root': {
 			position: 'absolute',
 			zIndex: 10
+		},
+
+		'&>img': {
+			width: 10,
+
+			[theme.breakpoints.up('xl')]: {
+				width: 20
+			}
 		}
 	},
 	next: {
@@ -124,6 +132,11 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		right: '-1%',
 		bottom: '54%',
 		width: 30,
+
+		[theme.breakpoints.up('xl')]: {
+			width: 60,
+			right: '-2%'
+		},
 
 		[theme.breakpoints.down('md')]: {
 			bottom: '15%',

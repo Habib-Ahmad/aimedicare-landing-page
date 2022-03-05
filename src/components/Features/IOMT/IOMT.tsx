@@ -7,7 +7,7 @@ import {
 	useMediaQuery
 } from '@mui/material';
 import { useStyles } from './useStyles';
-import Slider, { Settings } from 'react-slick';
+import Slider, { Settings, LazyLoadTypes } from 'react-slick';
 import stats from '../../../assets/features/stats.svg';
 import watch1 from '../../../assets/features/watch1.png';
 import watch2 from '../../../assets/features/watch2.png';
@@ -24,7 +24,7 @@ const NextArrow = ({ onClick }: any) => {
 			className={`${classes.arrow} ${classes.next}`}
 			onClick={onClick}
 		>
-			<img src={btn} alt="" style={{ width: 10 }} />
+			<img src={btn} alt="" />
 		</IconButton>
 	);
 };
@@ -36,7 +36,7 @@ const PrevArrow = ({ onClick }: any) => {
 			className={`${classes.arrow} ${classes.prev}`}
 			onClick={onClick}
 		>
-			<img src={btn} alt="" style={{ width: 10 }} />
+			<img src={btn} alt="" />
 		</IconButton>
 	);
 };
@@ -48,9 +48,12 @@ const IOMT = (): JSX.Element => {
 	const watches = [watch1, watch2, watch3, watch4, watch5];
 	const isDesktop = useMediaQuery('(min-width: 900px)');
 
+	const lazyLoad: LazyLoadTypes = 'ondemand';
+
 	const settings: Settings = {
 		infinite: true,
 		vertical: isDesktop ? true : false,
+		lazyLoad: lazyLoad,
 		speed: 300,
 		slidesToShow: 3,
 		centerMode: true,
@@ -83,7 +86,7 @@ const IOMT = (): JSX.Element => {
 
 				<Grid item xs={12} md={2}>
 					<Box className={classes.sliderWrapper}>
-						<Slider lazyLoad="ondemand" {...settings}>
+						<Slider {...settings}>
 							{watches.map((img, idx) => (
 								<div
 									key={img}
