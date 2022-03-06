@@ -12,7 +12,7 @@ This is the landing page for AiMedicare, a startup aiming to improve the Nigeria
 
 ## Links:
 
-+ [Live Site](http://demos.creative-tim.com/landing-page)
++ [Live Site](https://aimedicare.com.ng/)
 
 <br />
 
