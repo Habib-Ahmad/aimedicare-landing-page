@@ -40,7 +40,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		},
 
 		[theme.breakpoints.down('sm')]: {
-			width: 400
+			width: 300
 		}
 	},
 

@@ -5,11 +5,16 @@ import dialog from '../../assets/header/dialog.svg';
 import smallRobot from '../../assets/header/smallRobot.png';
 import smallDialog from '../../assets/header/smallDialog.svg';
 import btn from '../../assets/header/btn.svg';
+import Particles from '../Particles/Particles';
 
 const Header = (): JSX.Element => {
 	const classes = useStyles();
 	return (
 		<Box id="home" className={classes.header}>
+			<Box className={classes.particles}>
+				<Particles />
+			</Box>
+
 			<img src={robot} alt="" className={classes.robot} />
 			<img src={dialog} alt="" className={classes.dialog} />
 			<img src={smallRobot} alt="" className={classes.smallRobot} />

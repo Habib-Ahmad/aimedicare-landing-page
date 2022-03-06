@@ -40,11 +40,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	iPhone: {
 		display: 'block',
-		margin: '-100px auto 0',
-
-		[theme.breakpoints.down('sm')]: {
-			width: 280
-		}
+		margin: '-100px auto 0'
 	},
 	text: {
 		'&.MuiTypography-root': {

@@ -21,6 +21,12 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			height: '80vh'
 		}
 	},
+	particles: {
+		width: '100%',
+		height: '100vh',
+		position: 'absolute',
+		backgroundColor: 'transparent'
+	},
 	heading: {
 		'&.MuiTypography-root': {
 			color: '#fff',

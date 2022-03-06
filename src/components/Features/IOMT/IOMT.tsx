@@ -65,7 +65,7 @@ const IOMT = (): JSX.Element => {
 	};
 
 	return (
-		<Box className={classes.iomt}>
+		<Box id="iomt" className={classes.iomt}>
 			<Typography variant="h3">Internet of Medical Things</Typography>
 
 			<Grid container sx={{ marginTop: 8 }}>

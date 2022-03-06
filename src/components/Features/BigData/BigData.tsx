@@ -11,7 +11,7 @@ const BigData = () => {
 		<Box className={classes.bigData}>
 			<img src={dots} alt="" className={classes.dots} />
 			<img src={blob} alt="" className={classes.blob} />
-			<Typography variant="h3" data-aos="fade-up">
+			<Typography variant="h3" data-aos="fade-up" sx={{ padding: '0 5vw' }}>
 				Big Data Health Analysis
 			</Typography>
 
