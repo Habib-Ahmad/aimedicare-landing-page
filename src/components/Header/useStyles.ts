@@ -103,6 +103,11 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			right: '5%',
 			width: 200,
 
+			[theme.breakpoints.up('xl')]: {
+				width: 400,
+				bottom: '-25%'
+			},
+
 			[theme.breakpoints.down('sm')]: {
 				width: 100,
 				right: '2%',
