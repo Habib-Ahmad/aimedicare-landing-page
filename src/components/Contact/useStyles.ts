@@ -3,19 +3,12 @@ import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles((theme: Theme) => ({
 	contact: {
-		marginTop: theme.spacing(25),
-		padding: theme.spacing(0, 40),
+		margin: theme.spacing(25, 'auto', 0),
+		width: '60%',
+		display: 'block',
 
-		[theme.breakpoints.up('xl')]: {
-			padding: theme.spacing(0, 90)
-		},
-
-		[theme.breakpoints.down('lg')]: {
-			padding: theme.spacing(0, 20)
-		},
-
-		[theme.breakpoints.down('md')]: {
-			padding: theme.spacing(0, 4)
+		[theme.breakpoints.down('sm')]: {
+			width: '80%'
 		}
 	},
 	inputWrapper: {

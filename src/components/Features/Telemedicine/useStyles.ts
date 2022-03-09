@@ -25,6 +25,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			transform: 'skew(0deg, 5deg)'
 		},
 
+		[theme.breakpoints.up('xl')]: {
+			paddingBottom: '5vw'
+		},
+
 		[theme.breakpoints.down('md')]: {
 			padding: theme.spacing(0, 3),
 			transform: 'skew(0deg)',

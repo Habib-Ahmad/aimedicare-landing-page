@@ -104,7 +104,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			width: 200,
 
 			[theme.breakpoints.up('xl')]: {
-				width: 400,
+				width: '15vw',
 				bottom: '-25%'
 			},
 

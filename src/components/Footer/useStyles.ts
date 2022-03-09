@@ -24,13 +24,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	heading: {
 		'&.MuiTypography-root': {
-			fontSize: '1.2rem',
+			fontSize: 'clamp(1rem, 1.5vw, 4rem)',
 			fontWeight: '600',
-			marginBottom: theme.spacing(2),
-
-			[theme.breakpoints.up('xl')]: {
-				fontSize: '2.4rem'
-			}
+			marginBottom: theme.spacing(2)
 		}
 	},
 	links: {
@@ -38,25 +34,13 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		flexDirection: 'column',
 		alignItems: 'flex-start',
 		flexWrap: 'wrap',
-		height: 150,
-
-		[theme.breakpoints.up('xl')]: {
-			height: 250
-		},
-
-		[theme.breakpoints.down('md')]: {
-			height: 'auto'
-		}
+		width: '100%'
 	},
 	btn: {
 		'&.MuiButton-root': {
 			textTransform: 'none',
 			fontWeight: 300,
-			fontSize: '0.8rem',
-
-			[theme.breakpoints.up('xl')]: {
-				fontSize: '1.8rem'
-			}
+			fontSize: 'clamp(0.875rem, 1.2vw, 1.8rem)'
 		}
 	},
 	copyright: {
@@ -83,15 +67,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			borderRadius: 30,
 			backgroundColor: '#fff',
 			paddingRight: 0,
-			maxWidth: 500,
-			fontSize: '0.875rem',
-
-			[theme.breakpoints.up('xl')]: {
-				height: 80,
-				maxWidth: 700,
-				borderRadius: 50,
-				fontSize: '1.5rem'
-			}
+			width: '100%',
+			fontSize: '0.875rem'
 		}
 	},
 	subscribeBtn: {
@@ -101,13 +78,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			boxShadow: '-2px 0px 4px rgba(0,0,0,.1)',
 			width: 120,
 			height: 40,
-			fontWeight: 600,
-
-			[theme.breakpoints.up('xl')]: {
-				height: 80,
-				width: 240,
-				borderRadius: 50
-			}
+			fontWeight: 600
 		}
 	}
 }));

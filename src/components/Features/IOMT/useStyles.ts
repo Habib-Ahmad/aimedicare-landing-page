@@ -23,36 +23,29 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	stats: {
 		position: 'absolute',
-		width: 250,
+		width: '19vw',
 		top: 0,
-		left: '17%',
+		left: '18%',
 		zIndex: 100,
 
 		[theme.breakpoints.up('xl')]: {
-			width: 450
+			width: '18vw',
+			left: '20%'
 		},
 
 		[theme.breakpoints.down('md')]: {
-			left: '15vw'
-		},
-
-		[theme.breakpoints.down('sm')]: {
-			width: 200,
-			left: '8%'
+			width: '27vw',
+			left: '23vw'
 		}
 	},
 	watch: {
 		position: 'absolute',
-		width: 300,
+		width: '22vw',
 		top: 0,
 		left: '50%',
 
-		[theme.breakpoints.up('xl')]: {
-			width: 500
-		},
-
-		[theme.breakpoints.down('sm')]: {
-			width: 200
+		[theme.breakpoints.down('md')]: {
+			width: '35vw'
 		}
 	},
 	text: {
@@ -105,7 +98,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			width: 10,
 
 			[theme.breakpoints.up('xl')]: {
-				width: 20
+				width: '0.8vw'
 			}
 		}
 	},
@@ -134,8 +127,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		width: 30,
 
 		[theme.breakpoints.up('xl')]: {
-			width: 60,
-			right: '-2%'
+			width: 50,
+			right: '-4%'
 		},
 
 		[theme.breakpoints.down('md')]: {

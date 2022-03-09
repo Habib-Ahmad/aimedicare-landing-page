@@ -51,7 +51,7 @@ const Footer = () => {
 					sm={6}
 					md={4}
 					className={classes.gridItem}
-					data-aos="fade-up"
+					// data-aos="fade-up"
 				>
 					<Typography className={classes.heading}>AiMedicare</Typography>
 					<Typography>
@@ -67,7 +67,7 @@ const Footer = () => {
 					sm={6}
 					md={4}
 					className={classes.gridItem}
-					data-aos="fade-up"
+					// data-aos="fade-up"
 				>
 					<Typography className={classes.heading}>Useful Links</Typography>
 					<Box className={classes.links}>
@@ -90,7 +90,7 @@ const Footer = () => {
 					xs={12}
 					md={4}
 					className={classes.gridItem}
-					data-aos="fade-up"
+					// data-aos="fade-up"
 				>
 					<Typography>Subscribe to our newsletter</Typography>
 					<TextField
