@@ -2,34 +2,51 @@ import {
 	Box,
 	Typography,
 	TextField,
+	Checkbox,
 	Button,
-	CircularProgress
+	CircularProgress,
+	FormGroup,
+	FormControlLabel
 } from '@mui/material';
 import { useStyles } from './useStyles';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import axios from '../../axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
 	const classes = useStyles();
 
-	const handleSubmit = async ({
-		firstName,
-		lastName,
-		email,
-		phone,
-		message
-	}: {
-		firstName: string;
-		lastName: string;
-		email: string;
-		phone: string;
-		message: string;
-	}) => {
-		console.log(firstName, lastName, email, phone, message);
+	const notify = () =>
+		toast.success(
+			'Thank you for contacting us, we will get back to you shortly'
+		);
+
+	const handleSubmit = async (
+		values: {
+			firstName: string;
+			lastName: string;
+			email: string;
+			phoneNumber: string;
+			message: string;
+			receiveEmails: boolean;
+		},
+		setSubmitting: (arg0: boolean) => void
+	) => {
+		try {
+			axios.post('/contact', values).then(() => {
+				setSubmitting(false);
+				notify();
+			});
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	return (
 		<Box id="contact" className={classes.contact}>
+			<Toaster position="top-right" reverseOrder={false} />
+
 			<Typography variant="h2" data-aos="fade-up">
 				Get In Touch
 			</Typography>
@@ -47,8 +64,9 @@ const Contact = () => {
 					firstName: '',
 					lastName: '',
 					email: '',
-					phone: '',
-					message: ''
+					phoneNumber: '',
+					message: '',
+					receiveEmails: false
 				}}
 				validationSchema={Yup.object().shape({
 					firstName: Yup.string().required('First Name is required'),
@@ -58,7 +76,9 @@ const Contact = () => {
 						.required('E-mail is required')
 						.email('E-mail is not valid')
 				})}
-				onSubmit={handleSubmit}
+				onSubmit={(values, { setSubmitting }) =>
+					handleSubmit(values, setSubmitting)
+				}
 			>
 				{({
 					handleSubmit,
@@ -116,10 +136,10 @@ const Contact = () => {
 								variant="outlined"
 								label="Phone Number"
 								fullWidth
-								name="phone"
-								helperText={touched.phone ? errors.phone : ''}
-								error={touched.phone && Boolean(errors.phone)}
-								value={values.phone}
+								name="phoneNumber"
+								helperText={touched.phoneNumber ? errors.phoneNumber : ''}
+								error={touched.phoneNumber && Boolean(errors.phoneNumber)}
+								value={values.phoneNumber}
 								onChange={handleChange}
 							/>
 						</Box>
@@ -135,6 +155,19 @@ const Contact = () => {
 							value={values.message}
 							onChange={handleChange}
 						/>
+
+						<FormGroup>
+							<FormControlLabel
+								control={
+									<Checkbox
+										checked={values.receiveEmails}
+										onChange={handleChange}
+										name="receiveEmails"
+									/>
+								}
+								label="Subscribe to our news letter"
+							/>
+						</FormGroup>
 
 						<Button
 							type="submit"

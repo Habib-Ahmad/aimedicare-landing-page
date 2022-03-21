@@ -4,7 +4,11 @@ import { makeStyles } from '@mui/styles';
 export const useStyles = makeStyles((theme: Theme) => ({
 	telemedicine: {
 		marginTop: theme.spacing(14),
-		position: 'relative'
+		position: 'relative',
+
+		[theme.breakpoints.down('sm')]: {
+			overflowX: 'hidden'
+		}
 	},
 	heading: {
 		'&.MuiTypography-root': {

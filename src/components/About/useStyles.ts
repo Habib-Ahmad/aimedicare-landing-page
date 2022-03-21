@@ -17,7 +17,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	body: {
 		'&.MuiTypography-root': {
-			textAlign: 'center',
+			textAlign: 'justify',
 			color: '#666666',
 			lineHeight: 'clamp(2rem, 2vw, 4rem)',
 

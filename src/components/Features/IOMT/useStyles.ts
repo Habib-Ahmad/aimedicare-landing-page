@@ -50,9 +50,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	text: {
 		'&.MuiTypography-root': {
+			textAlign: 'justify',
 			[theme.breakpoints.down('md')]: {
-				margin: '500px 0 20px',
-				textAlign: 'center'
+				margin: '500px 0 20px'
 			},
 			[theme.breakpoints.down('sm')]: {
 				marginTop: '350px'

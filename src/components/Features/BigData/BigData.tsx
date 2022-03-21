@@ -19,14 +19,14 @@ const BigData = () => {
 				<img src={bigData} alt="" className={classes.img} />
 			</Box>
 
-			<Typography className={classes.txt} data-aos="fade-up">
+			{/* <Typography className={classes.txt} data-aos="fade-up">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
 				sollicitudin purus tristique amet. Purus velit tincidunt turpis
 				phasellus dolor consectetur augue. Commodo tincidunt tempor elit,
 				facilisi porta dictum. Nibh libero augue dui in fusce ac non rhoncus.
 				Pharetra duis diam habitant mauris integer. Quis eu mollis sed eu justo,
 				quis amet, molestie sapien. Velit in aliquet ultricies et
-			</Typography>
+			</Typography> */}
 		</Box>
 	);
 };
