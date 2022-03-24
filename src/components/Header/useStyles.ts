@@ -60,6 +60,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		bottom: '-11.5%',
 		left: '5%',
 
+		[theme.breakpoints.up('xl')]: {
+			bottom: '-9%'
+		},
+
 		[theme.breakpoints.down('sm')]: {
 			display: 'none'
 		}
@@ -104,13 +108,58 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
 			[theme.breakpoints.up('xl')]: {
 				width: '15vw',
-				bottom: '-25%'
+				bottom: '-18%'
 			},
 
 			[theme.breakpoints.down('sm')]: {
 				width: 100,
 				right: '2%',
 				bottom: '-8%'
+			}
+		}
+	},
+	formHeader: {
+		'&.MuiTypography-root': {
+			textAlign: 'center',
+			fontWeight: 600,
+			marginBottom: '10px',
+			color: 'white',
+			marginTop: '140px',
+
+			[theme.breakpoints.down('sm')]: {
+				marginTop: 40
+			}
+		}
+	},
+	subscribe: {
+		'&>.MuiOutlinedInput-root': {
+			height: 40,
+			borderRadius: 30,
+			backgroundColor: '#fff',
+			paddingRight: 0,
+			width: '40%',
+			fontSize: '0.875rem',
+			margin: 'auto',
+
+			[theme.breakpoints.down('sm')]: {
+				width: '80%'
+			}
+		}
+	},
+	subscribeBtn: {
+		'&.MuiButton-root': {
+			borderRadius: 30,
+			backgroundColor: theme.palette.primary.main,
+			fontSize: 'clamp(0.875rem, 1.2vw, 1rem)',
+			color: '#fff',
+			boxShadow: '-2px 0px 4px rgba(0,0,0,.1)',
+			width: 120,
+			height: 40,
+			fontWeight: 600,
+
+			'&:hover': {
+				backgroundColor: theme.palette.primary.main,
+				color: '#fff'
 			}
 		}
 	}

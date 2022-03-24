@@ -29,7 +29,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
 		'&>img': {
 			width: '10vw',
-			minWidth: 120
+			minWidth: 120,
+			'&:hover': {
+				fill: 'red'
+			}
 		},
 
 		'&>.MuiTypography-root': {

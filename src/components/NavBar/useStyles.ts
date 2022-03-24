@@ -77,11 +77,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		'&>.MuiButton-root': {
 			flex: 1,
 			textTransform: 'none',
-			fontSize: '1rem',
-
-			[theme.breakpoints.up('xl')]: {
-				fontSize: '2rem'
-			}
+			fontSize: 'clamp(0.875rem, 1.2vw, 1.5rem)'
 		}
 	},
 	drawer: {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
 	Box,
 	Grid,
@@ -16,6 +16,7 @@ import watch4 from '../../../assets/features/watch4.png';
 import watch5 from '../../../assets/features/watch5.png';
 import btn from '../../../assets/features/btn.svg';
 import active from '../../../assets/features/active.svg';
+import useOnScreen from '../../../hooks/useOnScreen';
 
 const NextArrow = ({ onClick }: any) => {
 	const classes = useStyles();
@@ -45,6 +46,26 @@ const IOMT = (): JSX.Element => {
 	const classes = useStyles();
 	const [imageIndex, setImageIndex] = useState(0);
 
+	useEffect(() => {
+		if (isVisible) {
+			setTimeout(() => {
+				setImageIndex(1);
+			}, 1000);
+			setTimeout(() => {
+				setImageIndex(2);
+			}, 1500);
+			setTimeout(() => {
+				setImageIndex(3);
+			}, 1000);
+			setTimeout(() => {
+				setImageIndex(4);
+			}, 2500);
+			setTimeout(() => {
+				setImageIndex(0);
+			}, 3000);
+		}
+	}, []);
+
 	const watches = [watch1, watch2, watch3, watch4, watch5];
 	const isDesktop = useMediaQuery('(min-width: 900px)');
 
@@ -63,6 +84,10 @@ const IOMT = (): JSX.Element => {
 		appendDots: () => <PrevArrow />,
 		beforeChange: (current: number, next: number) => setImageIndex(next)
 	};
+
+	const ref = useRef();
+	const isVisible = useOnScreen(ref);
+	console.log(isVisible);
 
 	return (
 		<Box id="iomt" className={classes.iomt}>
@@ -85,10 +110,10 @@ const IOMT = (): JSX.Element => {
 				</Grid>
 
 				<Grid item xs={12} md={2}>
-					<Box className={classes.sliderWrapper}>
+					<Box ref={ref} className={classes.sliderWrapper}>
 						<Slider {...settings}>
 							{watches.map((img, idx) => (
-								<div
+								<Box
 									key={img}
 									className={
 										idx === imageIndex
@@ -97,7 +122,7 @@ const IOMT = (): JSX.Element => {
 									}
 								>
 									<img src={img} alt={img} />
-								</div>
+								</Box>
 							))}
 						</Slider>
 						<img src={active} alt={active} className={classes.active} />

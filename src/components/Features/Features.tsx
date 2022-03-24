@@ -29,61 +29,33 @@ const Features = (): JSX.Element => {
 				container
 				justifyContent="center"
 				rowSpacing={10}
-				sx={{ padding: '0 15vw' }}
+				sx={{ padding: '0 10vw' }}
 			>
-				<Grid item xs={12} sm={6} md={4} data-aos="fade-up" data-aos-delay="50">
+				<Grid item xs={6} md={4} data-aos="fade-up" data-aos-delay="50">
 					<Box className={classes.feature}>
 						<img src={telemedicine} alt="" />
 						<Typography>Telemedicine</Typography>
 					</Box>
 				</Grid>
-				<Grid
-					item
-					xs={12}
-					sm={6}
-					md={4}
-					data-aos="fade-up"
-					data-aos-delay="100"
-				>
+				<Grid item xs={6} md={4} data-aos="fade-up" data-aos-delay="100">
 					<Box className={classes.feature}>
 						<img src={appleWatch} alt="" />
 						<Typography>Internet of medical things (IOMT)</Typography>
 					</Box>
 				</Grid>
-				<Grid
-					item
-					xs={12}
-					sm={6}
-					md={4}
-					data-aos="fade-up"
-					data-aos-delay="200"
-				>
+				<Grid item xs={6} md={4} data-aos="fade-up" data-aos-delay="200">
 					<Box className={classes.feature}>
 						<img src={ai} alt="" />
 						<Typography>Artificial Inteligence</Typography>
 					</Box>
 				</Grid>
-				<Grid
-					item
-					xs={12}
-					sm={6}
-					md={4}
-					data-aos="fade-up"
-					data-aos-delay="300"
-				>
+				<Grid item xs={6} md={4} data-aos="fade-up" data-aos-delay="300">
 					<Box className={classes.feature}>
 						<img src={bigData} alt="" />
 						<Typography>Big Data health analytics</Typography>
 					</Box>
 				</Grid>
-				<Grid
-					item
-					xs={12}
-					sm={6}
-					md={4}
-					data-aos="fade-up"
-					data-aos-delay="400"
-				>
+				<Grid item xs={6} md={4} data-aos="fade-up" data-aos-delay="400">
 					<Box className={classes.feature}>
 						<img src={ledger} alt="" />
 						<Typography>Decentralized ledger Technology</Typography>

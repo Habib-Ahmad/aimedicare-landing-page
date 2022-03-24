@@ -28,6 +28,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	imgWrapper: {
 		display: 'grid',
 		placeItems: 'center',
+		margin: theme.spacing(5, 0),
 
 		'&>img': {
 			objectFit: 'cover',
@@ -39,7 +40,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		}
 	},
 	earlyAccess: {
-		marginTop: '60px',
+		marginTop: '250px',
 		padding: '0 30vw',
 
 		[theme.breakpoints.down('md')]: {
@@ -72,6 +73,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		'&.MuiButton-root': {
 			borderRadius: 30,
 			backgroundColor: theme.palette.primary.main,
+			fontSize: 'clamp(0.875rem, 1.2vw, 1rem)',
 			color: '#fff',
 			boxShadow: '-2px 0px 4px rgba(0,0,0,.1)',
 			width: 120,

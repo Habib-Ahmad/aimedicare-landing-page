@@ -39,15 +39,15 @@ const Security = () => {
 				Data Security using Blockchain technology
 			</Typography>
 
+			<Box className={classes.imgWrapper} data-aos="fade-up">
+				<img src={security} alt="" />
+			</Box>
+
 			<Box className={classes.txtWrapper}>
 				<Typography className={classes.txt} data-aos="fade-up">
 					Your health records and transactions are secured with us! We use
 					decentralized ledger technology for data security.
 				</Typography>
-			</Box>
-
-			<Box className={classes.imgWrapper} data-aos="fade-up">
-				<img src={security} alt="" />
 			</Box>
 
 			<Box className={classes.earlyAccess} data-aos="fade-up">

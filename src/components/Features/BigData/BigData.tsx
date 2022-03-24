@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import { useStyles } from './useStyles';
 import bigData from '../../../assets/features/bigData.png';
 import dots from '../../../assets/features/dots2.svg';
@@ -15,18 +15,24 @@ const BigData = () => {
 				Big Data Health Analysis
 			</Typography>
 
-			<Box data-aos="fade-up">
-				<img src={bigData} alt="" className={classes.img} />
-			</Box>
+			<Grid container alignItems="center">
+				<Grid item xs={12} md={6}>
+					<Box data-aos="fade-up">
+						<img src={bigData} alt="" className={classes.img} />
+					</Box>
+				</Grid>
 
-			{/* <Typography className={classes.txt} data-aos="fade-up">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
-				sollicitudin purus tristique amet. Purus velit tincidunt turpis
-				phasellus dolor consectetur augue. Commodo tincidunt tempor elit,
-				facilisi porta dictum. Nibh libero augue dui in fusce ac non rhoncus.
-				Pharetra duis diam habitant mauris integer. Quis eu mollis sed eu justo,
-				quis amet, molestie sapien. Velit in aliquet ultricies et
-			</Typography> */}
+				<Grid item xs={12} md={6}>
+					<Typography className={classes.txt} data-aos="fade-up">
+						The congruence of close companions - wearable sensors and
+						smartphones - will flood the cloud centers with medical data at an
+						unprecedented rate. Gaining knowledge from this data is as important
+						as acquiring the information from the body. Patients only benefit
+						from wearing sensors when intelligent algorithms process the data
+						and offer some actions to take.
+					</Typography>
+				</Grid>
+			</Grid>
 		</Box>
 	);
 };

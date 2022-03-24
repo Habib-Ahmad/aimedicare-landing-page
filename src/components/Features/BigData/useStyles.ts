@@ -32,23 +32,15 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	img: {
 		display: 'block',
 		margin: theme.spacing(0, 'auto'),
-		width: 700,
-		zIndex: 100,
-
-		[theme.breakpoints.up('xl')]: {
-			width: 1291
-		},
-
-		[theme.breakpoints.down('sm')]: {
-			width: 300
-		}
+		width: '70%',
+		zIndex: 100
 	},
 
 	txt: {
 		'&.MuiTypography-root': {
 			color: '#666666',
 			marginTop: theme.spacing(5),
-			padding: '0 10vw',
+			padding: '0 5vw',
 			textAlign: 'justify',
 
 			[theme.breakpoints.down('sm')]: {

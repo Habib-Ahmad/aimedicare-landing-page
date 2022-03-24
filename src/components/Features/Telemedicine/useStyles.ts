@@ -5,6 +5,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	telemedicine: {
 		marginTop: theme.spacing(14),
 		position: 'relative',
+		height: '100vh',
 
 		[theme.breakpoints.down('sm')]: {
 			overflowX: 'hidden'
@@ -22,7 +23,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	boxWrapper: {
 		backgroundImage: 'linear-gradient(to bottom, #4fcaca, #137d81)',
 		zIndex: -100,
-		padding: theme.spacing(0, 6),
+		padding: theme.spacing(5, 6),
 		transform: 'skew(0deg, -5deg)',
 
 		'&>.MuiGrid-root': {
@@ -48,7 +49,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	iPhone: {
 		display: 'block',
-		margin: '-100px auto 0'
+		margin: '-100px auto 0',
+		width: '100%'
 	},
 	text: {
 		'&.MuiTypography-root': {

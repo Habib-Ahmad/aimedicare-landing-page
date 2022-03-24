@@ -55,7 +55,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 				margin: '500px 0 20px'
 			},
 			[theme.breakpoints.down('sm')]: {
-				marginTop: '350px'
+				marginTop: '250px'
 			}
 		}
 	},
