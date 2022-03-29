@@ -23,7 +23,7 @@ const Security = () => {
 		setSubmitting: (arg0: boolean) => void
 	) => {
 		try {
-			axios.post('/news-letters', { email: values.email }).then(() => {
+			axios.post('/pre-register', { email: values.email }).then(() => {
 				setSubmitting(false);
 				notify();
 			});

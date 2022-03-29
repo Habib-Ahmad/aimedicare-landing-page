@@ -87,7 +87,6 @@ const IOMT = (): JSX.Element => {
 
 	const ref = useRef();
 	const isVisible = useOnScreen(ref);
-	console.log(isVisible);
 
 	return (
 		<Box id="iomt" className={classes.iomt}>

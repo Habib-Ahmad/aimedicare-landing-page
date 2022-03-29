@@ -29,7 +29,7 @@ const Header = (): JSX.Element => {
 		setSubmitting: (arg0: boolean) => void
 	) => {
 		try {
-			axios.post('/news-letters', { email: values.email }).then(() => {
+			axios.post('/pre-register', { email: values.email }).then(() => {
 				setSubmitting(false);
 				notify();
 			});
@@ -63,57 +63,60 @@ const Header = (): JSX.Element => {
 			<Typography className={classes.formHeader} data-aos="fade-up">
 				Get early access to our software when we release
 			</Typography>
-			<Formik
-				initialValues={{
-					email: ''
-				}}
-				validationSchema={Yup.object().shape({
-					email: Yup.string()
-						.trim()
-						.required('Please enter you email')
-						.email('E-mail is not valid')
-				})}
-				onSubmit={(values, { setSubmitting }) =>
-					handleSubmit(values, setSubmitting)
-				}
-			>
-				{({
-					handleSubmit,
-					handleChange,
-					values,
-					touched,
-					errors,
-					isSubmitting
-				}) => (
-					<form onSubmit={handleSubmit} noValidate>
-						<TextField
-							data-aos="fade-up"
-							className={classes.subscribe}
-							placeholder="Enter your email"
-							name="email"
-							type="email"
-							fullWidth
-							value={values.email}
-							onChange={handleChange}
-							helperText={touched.email ? errors.email : ''}
-							error={touched.email && Boolean(errors.email)}
-							InputProps={{
-								endAdornment: (
-									<InputAdornment position="end">
-										<Button type="submit" className={classes.subscribeBtn}>
-											{isSubmitting ? (
-												<CircularProgress sx={{ color: 'white' }} />
-											) : (
-												'Submit'
-											)}
-										</Button>
-									</InputAdornment>
-								)
-							}}
-						/>
-					</form>
-				)}
-			</Formik>
+
+			<Box className={classes.subscribeWrapper}>
+				<Formik
+					initialValues={{
+						email: ''
+					}}
+					validationSchema={Yup.object().shape({
+						email: Yup.string()
+							.trim()
+							.required('Please enter you email')
+							.email('E-mail is not valid')
+					})}
+					onSubmit={(values, { setSubmitting }) =>
+						handleSubmit(values, setSubmitting)
+					}
+				>
+					{({
+						handleSubmit,
+						handleChange,
+						values,
+						touched,
+						errors,
+						isSubmitting
+					}) => (
+						<form onSubmit={handleSubmit} noValidate>
+							<TextField
+								data-aos="fade-up"
+								className={classes.subscribe}
+								placeholder="Enter your email"
+								name="email"
+								type="email"
+								fullWidth
+								value={values.email}
+								onChange={handleChange}
+								helperText={touched.email ? errors.email : ''}
+								error={touched.email && Boolean(errors.email)}
+								InputProps={{
+									endAdornment: (
+										<InputAdornment position="end">
+											<Button type="submit" className={classes.subscribeBtn}>
+												{isSubmitting ? (
+													<CircularProgress sx={{ color: 'white' }} />
+												) : (
+													'Submit'
+												)}
+											</Button>
+										</InputAdornment>
+									)
+								}}
+							/>
+						</form>
+					)}
+				</Formik>
+			</Box>
 		</Box>
 	);
 };

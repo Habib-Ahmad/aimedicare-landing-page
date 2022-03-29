@@ -22,7 +22,7 @@ const Telemedicine = (): JSX.Element => {
 					<Grid item xs={12} md={5} data-aos="fade">
 						<img src={features} alt="features" className={classes.features} />
 					</Grid>
-					<Grid item xs={12} md={3} data-aos="fade-left">
+					<Grid item xs={12} md={3} data-aos="fade-up">
 						<Typography className={classes.text}>
 							Telehealth is the distribution of health-related services and
 							information via electronic information and telecommunication

@@ -131,19 +131,22 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			}
 		}
 	},
+	subscribeWrapper: {
+		width: '40%',
+		display: 'block',
+		margin: 'auto',
+
+		[theme.breakpoints.down('sm')]: {
+			width: '80%'
+		}
+	},
 	subscribe: {
 		'&>.MuiOutlinedInput-root': {
 			height: 40,
 			borderRadius: 30,
 			backgroundColor: '#fff',
 			paddingRight: 0,
-			width: '40%',
-			fontSize: '0.875rem',
-			margin: 'auto',
-
-			[theme.breakpoints.down('sm')]: {
-				width: '80%'
-			}
+			fontSize: '0.875rem'
 		}
 	},
 	subscribeBtn: {
