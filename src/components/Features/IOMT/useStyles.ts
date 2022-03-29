@@ -8,6 +8,14 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
 		[theme.breakpoints.up('xl')]: {
 			marginBottom: theme.spacing(50)
+		},
+
+		[theme.breakpoints.down('md')]: {
+			marginTop: theme.spacing(50)
+		},
+
+		[theme.breakpoints.down('sm')]: {
+			marginTop: theme.spacing(40)
 		}
 	},
 	watchWrapper: {

@@ -74,6 +74,11 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		left: '15%',
 		width: 'clamp(100px, 15vw, 400px)',
 
+		[theme.breakpoints.up('xl')]: {
+			bottom: '21%',
+			left: '15%'
+		},
+
 		[theme.breakpoints.down('sm')]: {
 			display: 'none'
 		}

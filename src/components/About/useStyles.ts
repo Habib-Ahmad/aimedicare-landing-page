@@ -3,9 +3,8 @@ import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles((theme: Theme) => ({
 	about: {
-		padding: '8vw 10vw 0',
+		padding: '12vw 10vw 0',
 		position: 'relative',
-		height: '100vh',
 
 		[theme.breakpoints.down('sm')]: {
 			paddingTop: '12vw'
@@ -33,13 +32,22 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
+		flexWrap: 'wrap',
 		marginTop: '150px',
+
+		[theme.breakpoints.down('md')]: {
+			marginTop: '50px'
+		},
+
+		[theme.breakpoints.down('sm')]: {
+			marginTop: 0
+		},
 
 		'&>*': {
 			padding: '15px',
 
 			[theme.breakpoints.down('sm')]: {
-				width: '20%',
+				maxWidth: '33%',
 				marginTop: '50px'
 			}
 		}

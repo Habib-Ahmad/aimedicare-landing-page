@@ -64,6 +64,7 @@ const IOMT = (): JSX.Element => {
 				setImageIndex(0);
 			}, 3000);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const watches = [watch1, watch2, watch3, watch4, watch5];

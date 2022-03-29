@@ -5,11 +5,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	telemedicine: {
 		marginTop: theme.spacing(14),
 		position: 'relative',
-		height: '100vh',
-
-		[theme.breakpoints.down('sm')]: {
-			overflowX: 'hidden'
-		}
+		height: '100vh'
 	},
 	heading: {
 		'&.MuiTypography-root': {

@@ -13,6 +13,7 @@ export default function useOnScreen(ref) {
 		return () => {
 			observer.disconnect();
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return isIntersecting;
