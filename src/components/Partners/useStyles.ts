@@ -4,14 +4,16 @@ import { makeStyles } from '@mui/styles';
 export const useStyles = makeStyles((theme: Theme) => ({
 	partners: {
 		marginTop: theme.spacing(25),
-		overflow: 'hidden'
+		backgroundColor: theme.palette.secondary.main,
+		overflow: 'hidden',
+		padding: '40px 0'
 	},
 	logoWrapper1: {
 		overflow: 'hidden',
 		display: 'flex',
 		height: 'auto',
 		width: '1500px',
-		margin: theme.spacing(5, 'auto'),
+		margin: theme.spacing(2, 'auto'),
 
 		'&>img': {
 			width: 150,
@@ -27,7 +29,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		height: 'auto',
 		// marginRight: '1500px',
 		width: '1500px',
-		margin: theme.spacing(10, 'auto'),
+		margin: theme.spacing(2, 'auto'),
 
 		'&>img': {
 			width: 150,

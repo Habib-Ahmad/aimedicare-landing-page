@@ -2,14 +2,13 @@ import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
 	typography: {
-		fontFamily: "'Poppins', 'sans-serif'",
+		fontFamily: "'Ubuntu', sans-serif",
 
 		allVariants: {
-			fontSize: 'clamp(0.875rem, 1.2vw, 2rem)'
+			fontSize: 'clamp(1rem, 1.2vw, 2rem)'
 		},
 
 		h1: {
-			fontFamily: "'Copperplate'",
 			textTransform: 'uppercase',
 			fontSize: 'clamp(1.2rem, 2vw, 4rem)',
 			fontWeight: 700,
@@ -21,18 +20,12 @@ export const theme = createTheme({
 		},
 
 		h2: {
-			fontFamily: "'Copperplate'",
-			fontSize: 'clamp(1.2rem, 2vw, 3rem)',
-			textAlign: 'center',
-			textTransform: 'lowercase',
-
-			'&::first-letter': {
-				fontSize: 'clamp(1.5rem, 2.2vw, 3.5rem)'
-			}
+			fontSize: 'clamp(1.5rem, 2vw, 3rem)',
+			fontWeight: '700',
+			color: '#282C4B'
 		},
 
 		h3: {
-			fontFamily: "'Copperplate'",
 			fontSize: 'clamp(1rem, 2vw, 2.3rem)',
 			textAlign: 'center',
 			textTransform: 'lowercase',
@@ -42,6 +35,13 @@ export const theme = createTheme({
 			}
 		},
 
+		h6: {
+			color: '#F17216',
+			fontSize: '0.875rem',
+			fontWeight: '400',
+			marginBottom: 1
+		},
+
 		button: {
 			fontWeight: 700
 		}
@@ -49,7 +49,10 @@ export const theme = createTheme({
 
 	palette: {
 		primary: {
-			main: '#12A3A9'
+			main: '#0b7778'
+		},
+		secondary: {
+			main: '#EAFCF9'
 		}
 	},
 

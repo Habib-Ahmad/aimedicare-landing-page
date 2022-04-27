@@ -1,51 +1,111 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import { useStyles } from './useStyles';
-import blob from '../../assets/about/blob.svg';
-import telemedicine from '../../assets/about/telemedicine.svg';
-import iomt from '../../assets/about/iomt.svg';
-import ai from '../../assets/about/ai.svg';
-import bigData from '../../assets/about/bigData.svg';
-import ledger from '../../assets/about/ledger.svg';
+import iPhone from '../../assets/about/iPhone.png';
+import features from '../../assets/about/features.png';
+import arrow from '../../assets/about/arrow.svg';
+import one from '../../assets/about/one.svg';
 
 const About = (): JSX.Element => {
 	const classes = useStyles();
+	const isDesktop = useMediaQuery('(min-width: 600px)');
+
+	if (!isDesktop)
+		return (
+			<Box id="about" className={classes.about}>
+				<Box id="about" className={classes.headingWrapper} data-aos="fade-up">
+					<Typography variant="h6">AiMedicare</Typography>
+					<Typography variant="h2" sx={{ marginBottom: 2 }}>
+						About Us
+					</Typography>
+					<Typography className={classes.text}>
+						AiMedicare is building a revolutionary healthcare service delivery
+						technology across the African continent. We have improved ease of
+						access to health service through the integration of an ecosystem and
+						tech infrastructure. We merged telemedicine, IoMT (internet of
+						Medical things), Artificial intelligence, big data health analytics
+						and Decentralized Ledger Technology (Blockchain technology) to give
+						a patient tailored healthcare solution.
+					</Typography>
+				</Box>
+
+				<Box
+					id="about"
+					className={classes.telemedicineWrapper}
+					data-aos="fade-up"
+				>
+					<Typography variant="h6">AiMedicare</Typography>
+					<Typography variant="h2" sx={{ marginBottom: 2 }}>
+						Telemedicine
+					</Typography>
+					<Typography className={classes.text}>
+						Telehealth is the distribution of health-related services and
+						information via electronic information and telecommunication
+						technologies. It allows long-distance patient and clinician contact,
+						care, advice, reminders, education, intervention, monitoring, and
+						remote admissions.
+					</Typography>
+				</Box>
+
+				<Box
+					sx={{ display: 'flex', padding: '0 5vw', margin: '100px 0' }}
+					data-aos="fade-up"
+				>
+					<img src={iPhone} alt="Phone" className={classes.phone} />
+					<Box>
+						<img src={features} alt="Features" className={classes.features} />
+						<img src={arrow} alt="Arrow" className={classes.arrow} />
+					</Box>
+				</Box>
+			</Box>
+		);
 
 	return (
-		<Box id="about" className={classes.about}>
-			<img src={blob} alt="" className={classes.blob} />
-			<Typography variant="h2" sx={{ marginBottom: 2 }}>
-				About Us
-			</Typography>
-			<Typography
-				className={classes.body}
-				data-aos="fade-up"
-				data-aos-delay="150"
-			>
-				AiMedicare is building a revolutionary healthcare service delivery
-				technology across the African continent. We have improved ease of access
-				to health service through the integration of an ecosystem and tech
-				infrastructure. We merged telemedicine, IoMT (internet of Medical
-				things), Artificial intelligence, big data health analytics and
-				Decentralized Ledger Technology (Blockchain technology) to give a
-				patient tailored healthcare solution.
-			</Typography>
+		<Box id="about" className={classes.about} data-aos="fade-up">
+			<Box id="about" className={classes.headingWrapper}>
+				<Typography variant="h6">AiMedicare</Typography>
+				<Typography variant="h2" sx={{ marginBottom: 2 }}>
+					About Us
+				</Typography>
+				<Typography className={classes.text}>
+					AiMedicare is building a revolutionary healthcare service delivery
+					technology across the African continent. We have improved ease of
+					access to health service through the integration of an ecosystem and
+					tech infrastructure. We merged telemedicine, IoMT (internet of Medical
+					things), Artificial intelligence, big data health analytics and
+					Decentralized Ledger Technology (Blockchain technology) to give a
+					patient tailored healthcare solution.
+				</Typography>
+			</Box>
 
-			<Box className={classes.icons}>
-				<img src={telemedicine} alt={telemedicine} data-aos="zoom-in" />
-				<img src={iomt} alt={iomt} data-aos="zoom-in" data-aos-delay="200" />
-				<img src={ai} alt={ai} data-aos="zoom-in" data-aos-delay="400" />
-				<img
-					src={bigData}
-					alt={bigData}
-					data-aos="zoom-in"
-					data-aos-delay="600"
-				/>
-				<img
-					src={ledger}
-					alt={ledger}
-					data-aos="zoom-in"
-					data-aos-delay="800"
-				/>
+			<img
+				src={iPhone}
+				alt="Phone"
+				className={classes.phone}
+				data-aos="fade-up"
+			/>
+			<img
+				src={arrow}
+				alt="Arrow"
+				className={classes.arrow}
+				data-aos="fade-up"
+			/>
+
+			<Box data-aos="fade-up">
+				<img src={features} alt="Features" className={classes.features} />
+				<Box id="about" className={classes.telemedicineWrapper}>
+					<img src={one} alt="One" className={classes.one} />
+					<Typography variant="h6">AiMedicare</Typography>
+					<Typography variant="h2" sx={{ marginBottom: 2 }}>
+						Telemedicine
+					</Typography>
+					<Typography className={classes.text}>
+						Telehealth is the distribution of health-related services and
+						information via electronic information and telecommunication
+						technologies. It allows long-distance patient and clinician contact,
+						care, advice, reminders, education, intervention, monitoring, and
+						remote admissions.
+					</Typography>
+				</Box>
 			</Box>
 		</Box>
 	);

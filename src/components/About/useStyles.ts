@@ -3,52 +3,79 @@ import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles((theme: Theme) => ({
 	about: {
-		padding: '12vw 10vw 0',
-		position: 'relative',
-
-		[theme.breakpoints.down('sm')]: {
-			paddingTop: '12vw'
-		}
-	},
-	blob: {
-		position: 'absolute',
-		left: 0,
-		width: '10%'
-	},
-	body: {
-		'&.MuiTypography-root': {
-			textAlign: 'justify',
-			color: '#666666',
-			lineHeight: 'clamp(2rem, 2vw, 4rem)',
-
-			[theme.breakpoints.down('sm')]: {
-				color: '#000',
-				textAlign: 'left',
-				fontSize: '0.875rem'
-			}
-		}
-	},
-	icons: {
+		padding: '12vw 5vw 0 0',
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'center',
-		flexWrap: 'wrap',
-		marginTop: '150px',
-
-		[theme.breakpoints.down('md')]: {
-			marginTop: '50px'
-		},
 
 		[theme.breakpoints.down('sm')]: {
-			marginTop: 0
-		},
+			padding: '12vw 0 0',
+			flexDirection: 'column'
+		}
+	},
+	headingWrapper: {
+		backgroundColor: theme.palette.secondary.main,
+		padding: '40px 40px 40px 70px',
 
-		'&>*': {
-			padding: '15px',
+		[theme.breakpoints.down('sm')]: {
+			padding: '20px',
+			marginBottom: '50px'
+		}
+	},
+	phone: {
+		marginLeft: '-70px',
+
+		[theme.breakpoints.down('sm')]: {
+			marginLeft: 0,
+			width: '200px'
+		}
+	},
+	arrow: {
+		width: '120px',
+		margin: '-100px 50px 0 -70px',
+
+		[theme.breakpoints.down('sm')]: {
+			margin: '0',
+			width: '80px'
+		}
+	},
+	features: {
+		marginBottom: '100px',
+
+		[theme.breakpoints.down('sm')]: {
+			marginBottom: '20px',
+			marginTop: '-30px',
+			width: '150px'
+		}
+	},
+	one: {
+		position: 'absolute',
+		left: '60%',
+
+		[theme.breakpoints.down('sm')]: {
+			display: 'none'
+		}
+	},
+	telemedicineWrapper: {
+		position: 'relative',
+		marginLeft: '-70px',
+
+		[theme.breakpoints.down('sm')]: {
+			marginLeft: 0,
+			padding: '0 5vw'
+		}
+	},
+	text: {
+		'&.MuiTypography-root': {
+			textAlign: 'justify',
+			color: '#747582',
+			borderLeft: '2px solid #0FA6AA',
+			paddingLeft: '20px',
 
 			[theme.breakpoints.down('sm')]: {
-				maxWidth: '33%',
-				marginTop: '50px'
+				textAlign: 'left',
+				paddingLeft: 0,
+				borderLeft: 'none',
+				lineHeight: '2rem'
 			}
 		}
 	}

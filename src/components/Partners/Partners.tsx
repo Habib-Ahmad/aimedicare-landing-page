@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { useStyles } from './useStyles';
 import algorizmi from '../../assets/partners/algorizmi.png';
 import nitda from '../../assets/partners/nitda.png';
@@ -19,10 +19,6 @@ const Partners = () => {
 
 	return (
 		<Box className={classes.partners}>
-			<Typography variant="h2" sx={{ marginBottom: 5 }} data-aos="fade-up">
-				Our Partners
-			</Typography>
-
 			<Box className={classes.logoWrapper1} data-aos="fade">
 				<img src={algorizmi} alt="" />
 				<img src={nitda} alt="" />

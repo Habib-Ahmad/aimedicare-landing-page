@@ -4,43 +4,57 @@ import { makeStyles } from '@mui/styles';
 export const useStyles = makeStyles((theme: Theme) => ({
 	features: {
 		marginTop: theme.spacing(18),
-		position: 'relative'
+		padding: '0 5vw',
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'flex-start',
+
+		[theme.breakpoints.down('sm')]: {
+			flexDirection: 'column'
+		}
 	},
-	curve: {
-		position: 'absolute',
-		objectFit: 'cover',
-		display: 'none'
+	headingWrapper: {
+		width: '20%',
+		marginRight: '60px',
+
+		[theme.breakpoints.down('sm')]: {
+			width: '100%',
+			marginRight: 0,
+			marginBottom: '40px'
+		}
 	},
-	blob: {
-		position: 'absolute',
-		right: 0,
-		top: '5%',
-		width: '25%'
-	},
-	triageBlob1: {
-		position: 'absolute',
-		right: 0,
-		top: '43%',
-		width: '15vw'
+	featureWrapper: {
+		display: 'flex',
+		alignItems: 'center',
+
+		[theme.breakpoints.down('sm')]: {
+			width: '100vw',
+			overflowX: 'scroll',
+			overflowY: 'hidden'
+		}
 	},
 	feature: {
-		display: 'grid',
-		placeItems: 'center',
+		display: 'flex',
+		flexDirection: 'column',
+		border: '1px solid #adadad40',
+		width: '160px',
+		height: '160px',
+		margin: '10px',
+		padding: '20px',
+		flexShrink: 0,
+
+		'&:hover': {
+			boxShadow: '0px 0px 10px rgba(0,0,0,0.2)'
+		},
 
 		'&>img': {
-			width: '10vw',
-			minWidth: 120,
-			'&:hover': {
-				fill: 'red'
-			}
+			width: '40px',
+			marginBottom: '20px'
 		},
 
 		'&>.MuiTypography-root': {
-			fontWeight: 600,
-			fontSize: 'clamp(0.875rem, 1vw, 1.5rem)',
-			marginTop: theme.spacing(),
-			color: '#676868',
-			textAlign: 'center'
+			fontWeight: '600',
+			fontSize: '0.875rem'
 		}
 	}
 }));

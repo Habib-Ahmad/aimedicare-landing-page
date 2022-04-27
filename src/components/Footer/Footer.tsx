@@ -1,17 +1,11 @@
-import {
-	Box,
-	Button,
-	Grid,
-	InputAdornment,
-	TextField,
-	Typography,
-	CircularProgress
-} from '@mui/material';
+import { Box, Button, Grid, Typography, IconButton } from '@mui/material';
 import { useStyles } from './useStyles';
-import { Formik } from 'formik';
-import * as Yup from 'yup';
-import toast, { Toaster } from 'react-hot-toast';
-import axios from '../../axios';
+import facebook from '../../assets/footer/facebook.svg';
+import linkedin from '../../assets/footer/linkedin.svg';
+import instagram from '../../assets/footer/instagram.svg';
+import whatsapp from '../../assets/footer/whatsapp.svg';
+import twitter from '../../assets/footer/twitter.svg';
+import Subscribe from '../Subscribe/Subscribe';
 
 const links = [
 	{
@@ -44,29 +38,34 @@ const links = [
 	}
 ];
 
+const socialLinks = [
+	{
+		icon: facebook,
+		href: ''
+	},
+	{
+		icon: linkedin,
+		href: ''
+	},
+	{
+		icon: instagram,
+		href: ''
+	},
+	{
+		icon: whatsapp,
+		href: ''
+	},
+	{
+		icon: twitter,
+		href: ''
+	}
+];
+
 const Footer = () => {
 	const classes = useStyles();
 
-	const notify = () => toast.success('You have successfuly subscribed');
-
-	const handleSubmit = (
-		values: { email: string },
-		setSubmitting: (arg0: boolean) => void
-	) => {
-		try {
-			axios.post('/news-letters', { email: values.email }).then(() => {
-				setSubmitting(false);
-				notify();
-			});
-		} catch (error) {
-			console.error(error);
-		}
-	};
-
 	return (
-		<Box sx={{ marginTop: 20 }}>
-			<Toaster position="top-right" reverseOrder={false} />
-
+		<Box sx={{ marginTop: 5 }}>
 			<Grid container className={classes.footer} rowSpacing={5}>
 				<Grid
 					item
@@ -82,6 +81,13 @@ const Footer = () => {
 						that uses IOMT, AI, Big data Health analytics, and DLT for patient
 						tailored solutions.
 					</Typography>
+					<Box>
+						{socialLinks.map((link, idx) => (
+							<IconButton key={idx} href={link.href}>
+								<img src={link.icon} alt={link.icon} />
+							</IconButton>
+						))}
+					</Box>
 				</Grid>
 
 				<Grid
@@ -116,56 +122,7 @@ const Footer = () => {
 					data-aos="fade-up"
 				>
 					<Typography>Subscribe to our newsletter</Typography>
-					<Formik
-						initialValues={{
-							email: ''
-						}}
-						validationSchema={Yup.object().shape({
-							email: Yup.string()
-								.trim()
-								.required('Please enter you email')
-								.email('E-mail is not valid')
-						})}
-						onSubmit={(values, { setSubmitting }) =>
-							handleSubmit(values, setSubmitting)
-						}
-					>
-						{({
-							handleSubmit,
-							handleChange,
-							values,
-							touched,
-							errors,
-							isSubmitting
-						}) => (
-							<form onSubmit={handleSubmit} noValidate>
-								<TextField
-									className={classes.subscribe}
-									placeholder="Enter your email"
-									name="email"
-									type="email"
-									fullWidth
-									value={values.email}
-									onChange={handleChange}
-									helperText={touched.email ? errors.email : ''}
-									error={touched.email && Boolean(errors.email)}
-									InputProps={{
-										endAdornment: (
-											<InputAdornment position="end">
-												<Button type="submit" className={classes.subscribeBtn}>
-													{isSubmitting ? (
-														<CircularProgress sx={{ color: 'white' }} />
-													) : (
-														'Submit'
-													)}
-												</Button>
-											</InputAdornment>
-										)
-									}}
-								/>
-							</form>
-						)}
-					</Formik>
+					<Subscribe />
 				</Grid>
 			</Grid>
 

@@ -47,16 +47,19 @@ const Contact = () => {
 		<Box id="contact" className={classes.contact}>
 			<Toaster position="top-right" reverseOrder={false} />
 
-			<Typography variant="h2" data-aos="fade-up">
+			<Typography
+				variant="h2"
+				data-aos="fade-up"
+				sx={{ textAlign: 'center', marginBottom: 3 }}
+			>
 				Get In Touch
 			</Typography>
 
-			<Typography sx={{ textAlign: 'center', marginTop: 3 }} data-aos="fade-up">
+			<Typography
+				sx={{ textAlign: 'center', color: '#676868' }}
+				data-aos="fade-up"
+			>
 				Do you provide any medical services or want to partner?
-			</Typography>
-
-			<Typography className={classes.txt} data-aos="fade-up">
-				Fields marked with an asterisk (*) are required.
 			</Typography>
 
 			<Formik

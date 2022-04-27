@@ -40,7 +40,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		'&.MuiButton-root': {
 			textTransform: 'none',
 			fontWeight: 300,
-			fontSize: 'clamp(0.875rem, 1.2vw, 1.8rem)'
+			fontSize: 'clamp(0.875rem, 1.2vw, 1.8rem)',
+			padding: 0
 		}
 	},
 	copyright: {
