@@ -4,60 +4,40 @@ import { makeStyles } from '@mui/styles';
 export const useStyles = makeStyles((theme: Theme) => ({
 	navbar: {
 		padding: theme.spacing(0, 8),
-		backgroundColor: 'transparent',
-		position: 'absolute',
-		top: 0,
-		zIndex: 1000,
-
-		'&>.MuiGrid-root>.MuiButton-text': {
-			textShadow: '2px 2px 4px rgba(0,0,0,.2)'
-		},
+		backgroundColor: theme.palette.primary.main,
+		height: '10vh',
 
 		[theme.breakpoints.down('md')]: {
-			padding: theme.spacing(0, 2)
+			padding: theme.spacing(0, 3),
+			backgroundColor: theme.palette.secondary.main
 		}
 	},
-	gridItem: {
-		[theme.breakpoints.down('md')]: {
-			paddingLeft: '10vw'
-		}
-	},
+
 	logoWrapper: {
 		display: 'flex',
-		alignItems: 'center',
-
-		[theme.breakpoints.down('md')]: {
-			flexDirection: 'column'
-		}
+		alignItems: 'center'
 	},
+
 	logo: {
-		backgroundColor: '#fff',
-		borderBottomLeftRadius: '2vw',
-		borderBottomRightRadius: '2vw',
-		padding: '15px 10px',
-		marginRight: 15,
-		width: '7vw',
-		maxWidth: 150,
-		minWidth: 90,
-
-		[theme.breakpoints.down('md')]: {
-			margin: ' 0 auto',
-			display: 'block',
-			borderBottomLeftRadius: '5vw',
-			borderBottomRightRadius: '5vw'
-		}
+		width: 40
 	},
+
 	logoText: {
 		'&.MuiTypography-root': {
+			marginLeft: '30px',
 			color: '#fff',
-			fontWeight: 700,
-			fontSize: 'clamp(1.2rem, 1vw, 4rem)',
+			fontWeight: 500,
+			fontSize: 'clamp(1.2rem, 2vw, 4rem)',
 
 			[theme.breakpoints.down('md')]: {
-				textAlign: 'center'
+				textAlign: 'center',
+				marginLeft: '15px',
+				color: theme.palette.primary.main,
+				fontWeight: 700
 			}
 		}
 	},
+
 	menu: {
 		'&.MuiIconButton-root': {
 			display: 'none',
@@ -68,18 +48,32 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			}
 		}
 	},
+
 	menuItems: {
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'flex-end',
+		justifyContent: 'flex-start',
 		height: '100%',
 
 		'&>.MuiButton-root': {
-			flex: 1,
-			textTransform: 'none',
-			fontSize: 'clamp(0.875rem, 1.2vw, 1.5rem)'
+			fontSize: 'clamp(0.875rem, 1.2vw, 1.5rem)',
+			fontWeight: 400,
+			marginRight: '20px',
+
+			'&::after': {
+				content: "''",
+				width: 20,
+				height: 20,
+				backgroundColor: 'white',
+				borderRadius: '50%'
+			},
+
+			[theme.breakpoints.down('sm')]: {
+				marginRight: 0
+			}
 		}
 	},
+
 	drawer: {
 		'&>.MuiPaper-root': {
 			paddingTop: theme.spacing(5),

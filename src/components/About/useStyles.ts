@@ -17,7 +17,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		padding: '40px 40px 40px 70px',
 
 		[theme.breakpoints.down('sm')]: {
-			padding: '20px',
+			padding: '10vw',
 			marginBottom: '50px'
 		}
 	},
@@ -26,7 +26,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
 		[theme.breakpoints.down('sm')]: {
 			marginLeft: 0,
-			width: '200px'
+			width: '210px'
 		}
 	},
 	arrow: {
@@ -61,7 +61,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
 		[theme.breakpoints.down('sm')]: {
 			marginLeft: 0,
-			padding: '0 5vw'
+			padding: '0 10vw'
 		}
 	},
 	text: {
@@ -72,7 +72,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			paddingLeft: '20px',
 
 			[theme.breakpoints.down('sm')]: {
-				textAlign: 'left',
 				paddingLeft: 0,
 				borderLeft: 'none',
 				lineHeight: '2rem'

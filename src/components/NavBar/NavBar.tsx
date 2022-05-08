@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { useStyles } from './useStyles';
 import logo from '../../assets/logo.svg';
+import logo2 from '../../assets/logo2.svg';
 import { Menu } from '@mui/icons-material';
 
 const menuItems = [
@@ -18,12 +19,12 @@ const menuItems = [
 		to: '#home'
 	},
 	{
-		name: 'About',
-		to: '#about'
-	},
-	{
 		name: 'Features',
 		to: '#features'
+	},
+	{
+		name: 'About',
+		to: '#about'
 	},
 	{
 		name: 'Contact us',
@@ -64,26 +65,24 @@ const NavBar = (): JSX.Element => {
 	};
 
 	return (
-		<Grid container className={classes.navbar}>
-			<Grid
-				item
-				xs={10}
-				md={6}
-				className={classes.gridItem}
-				data-aos="fade-down"
-			>
+		<Grid id="home" container className={classes.navbar} alignItems="center">
+			<Grid item xs={10} md={5} data-aos="fade-down">
 				<Box className={classes.logoWrapper}>
-					<img src={logo} alt="aiMedicare" className={classes.logo} />
+					<img
+						src={isDesktop ? logo : logo2}
+						alt="aiMedicare"
+						className={classes.logo}
+					/>
 					<Typography className={classes.logoText}>AiMedicare</Typography>
 				</Box>
 			</Grid>
-			<Grid item xs={2} md={6} gap={3} data-aos="fade-down">
+			<Grid item xs={2} md={7} columnSpacing={8} data-aos="fade-down">
 				{isDesktop && (
 					<Box className={classes.menuItems}>{renderMenuItems()}</Box>
 				)}
 
 				<IconButton className={classes.menu} onClick={toggleDrawer(true)}>
-					<Menu sx={{ color: '#fff', fontSize: '2rem' }} />
+					<Menu sx={{ color: '#0c9093', fontSize: '2rem' }} />
 				</IconButton>
 				<SwipeableDrawer
 					anchor="right"

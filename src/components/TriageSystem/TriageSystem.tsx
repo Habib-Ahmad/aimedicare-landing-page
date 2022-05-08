@@ -8,7 +8,7 @@ const TriageSystem = (): JSX.Element => {
 
 	return (
 		<Grid
-			id="security"
+			id="triage"
 			container
 			className={classes.container}
 			alignItems="center"

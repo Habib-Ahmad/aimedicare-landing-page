@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header';
 import Features from './components/Features/Features';
 import About from './components/About/About';
+import IOMT from './components/IOMT/IOMT';
 import TriageSystem from './components/TriageSystem/TriageSystem';
 import BigData from './components/BigData/BigData';
 import Security from './components/Security/Security';
@@ -12,7 +13,6 @@ import Contact from './components/Contact/Contact';
 import Partners from './components/Partners/Partners';
 import Footer from './components/Footer/Footer';
 import './aos';
-import IOMT from './components/IOMT/IOMT';
 
 const App = (): JSX.Element => {
 	return (

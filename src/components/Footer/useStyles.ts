@@ -25,7 +25,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	heading: {
 		'&.MuiTypography-root': {
 			fontSize: 'clamp(1rem, 1.5vw, 4rem)',
-			fontWeight: '600',
+			fontWeight: 500,
 			marginBottom: theme.spacing(2)
 		}
 	},

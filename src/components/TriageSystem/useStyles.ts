@@ -21,6 +21,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
 		[theme.breakpoints.down('sm')]: {
 			width: '100%',
+			maxWidth: '100%',
 			margin: 'auto'
 		}
 	},

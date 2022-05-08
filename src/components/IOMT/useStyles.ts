@@ -4,13 +4,24 @@ import { makeStyles } from '@mui/styles';
 export const useStyles = makeStyles((theme: Theme) => ({
 	iomt: {
 		margin: theme.spacing(15, 0),
-		padding: '0 5vw'
+		padding: '10vw',
+
+		[theme.breakpoints.down('md')]: {
+			paddingBottom: '15vw',
+			backgroundColor: theme.palette.secondary.main
+		}
 	},
 
 	slide: {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center'
+	},
+
+	arrow: {
+		[theme.breakpoints.down('md')]: {
+			width: '30px'
+		}
 	},
 
 	watchWrapper: {
@@ -37,21 +48,33 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		},
 
 		[theme.breakpoints.down('md')]: {
-			width: '27vw',
-			left: '23vw'
+			width: '40vw',
+			top: '-60%',
+			left: '-45%'
 		}
 	},
 
 	watch: {
 		width: 'auto',
-		height: '400px'
+		height: '400px',
+
+		[theme.breakpoints.down('sm')]: {
+			height: '200px',
+			margin: '0 30px',
+			zIndex: 100
+		}
 	},
 
 	splash: {
 		position: 'absolute',
 		bottom: '-30%',
 		zIndex: '-100',
-		width: '450px'
+		width: '450px',
+
+		[theme.breakpoints.down('sm')]: {
+			width: '250px',
+			zIndex: '0'
+		}
 	},
 
 	headingWrapper: {
@@ -59,7 +82,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
 		[theme.breakpoints.down('sm')]: {
 			marginLeft: 0,
-			padding: '0 5vw'
+			marginBottom: '200px'
 		}
 	},
 

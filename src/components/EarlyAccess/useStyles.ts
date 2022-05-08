@@ -25,7 +25,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		margin: 'auto',
 
 		[theme.breakpoints.down('sm')]: {
-			wisth: '90%'
+			width: '80%'
 		}
 	}
 }));

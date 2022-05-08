@@ -1,173 +1,86 @@
 import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import background from '../../assets/header/background.png';
 
 export const useStyles = makeStyles((theme: Theme) => ({
 	header: {
-		backgroundImage: `url(${background})`,
-		backgroundColor: '#0b7778',
-		height: '98vh',
-		backgroundSize: 'contain',
-		backgroundRepeat: 'no-repeat',
-		backgroundPosition: 'right',
+		height: '75vh',
 		position: 'relative',
-		padding: '0 5vw',
-
-		[theme.breakpoints.down('md')]: {
-			backgroundSize: 'cover'
-		},
+		padding: '8vw 8vw 8vw 18vw',
+		backgroundColor: theme.palette.secondary.main,
 
 		[theme.breakpoints.down('sm')]: {
-			height: '80vh'
+			padding: '20vw 10vw'
 		}
 	},
-	particles: {
-		width: '100vw',
+
+	arrow: {
 		position: 'absolute',
-		backgroundColor: 'transparent'
+		width: '100px',
+		left: '55%',
+		top: '30%',
+
+		[theme.breakpoints.down('sm')]: {
+			display: 'none'
+		}
 	},
+
 	heading: {
 		'&.MuiTypography-root': {
-			color: '#fff',
-			textShadow: '2px 2px 10px rgba(0,0,0,.2)',
-			textAlign: 'center',
-			paddingTop: '12vw',
+			fontSize: 'clamp(2rem, 3.3vw, 4rem)',
+			fontWeight: 700,
+			color: '#282C4B',
+			width: '50%',
+			marginBottom: '20px',
 
-			[theme.breakpoints.down('md')]: {
-				paddingTop: '20vw',
-				lineHeight: '2rem'
+			'&>span': {
+				color: theme.palette.primary.main,
+				position: 'relative',
+
+				'&>img': {
+					position: 'absolute',
+					left: '5%',
+					bottom: '-25%',
+					width: '250px'
+				}
 			},
 
 			[theme.breakpoints.down('sm')]: {
-				paddingTop: '40vw'
+				width: '100%'
 			}
 		}
 	},
+
 	subHeading: {
 		'&.MuiTypography-root': {
-			color: '#fff',
-			textAlign: 'center',
+			color: '#747582',
 			fontSize: 'clamp(1rem, 1vw, 3rem)',
-			fontFamily: "'CopperplateMedium'",
-			fontWeight: '600',
-			textTransform: 'uppercase',
-			letterSpacing: '1px',
-			marginTop: theme.spacing(3)
-		}
-	},
-	robot: {
-		position: 'absolute',
-		bottom: '-11.5%',
-		left: '5%',
-
-		[theme.breakpoints.up('xl')]: {
-			bottom: '-9%'
-		},
-
-		[theme.breakpoints.down('sm')]: {
-			display: 'none'
-		}
-	},
-	dialog: {
-		position: 'absolute',
-		bottom: '25%',
-		left: '15%',
-		width: 'clamp(100px, 15vw, 400px)',
-
-		[theme.breakpoints.up('xl')]: {
-			bottom: '21%',
-			left: '15%'
-		},
-
-		[theme.breakpoints.down('sm')]: {
-			display: 'none'
-		}
-	},
-	smallRobot: {
-		display: 'none',
-
-		[theme.breakpoints.down('sm')]: {
-			display: 'block',
-			position: 'absolute',
-			bottom: '-7%',
-			left: '-4%',
-			width: 250
-		}
-	},
-	smallDialog: {
-		display: 'none',
-
-		[theme.breakpoints.down('sm')]: {
-			display: 'block',
-			position: 'absolute',
-			bottom: '13%',
-			left: '35%'
-		}
-	},
-	btn: {
-		'&.MuiIconButton-root': {
-			position: 'absolute',
-			bottom: '-15%',
-			right: '5%',
-			width: 200,
-
-			[theme.breakpoints.up('xl')]: {
-				width: '15vw',
-				bottom: '-18%'
-			},
+			width: '40%',
+			lineHeight: '2rem',
 
 			[theme.breakpoints.down('sm')]: {
-				width: 100,
-				right: '2%',
-				bottom: '-8%'
+				width: '90%'
 			}
 		}
 	},
-	formHeader: {
-		'&.MuiTypography-root': {
-			textAlign: 'center',
-			fontWeight: 600,
-			marginBottom: '10px',
-			color: 'white',
-			marginTop: '140px',
 
-			[theme.breakpoints.down('sm')]: {
-				marginTop: 40
-			}
-		}
+	btnWrapper: {
+		marginTop: '30px',
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'flex-start'
 	},
-	subscribeWrapper: {
-		width: '40%',
-		display: 'block',
-		margin: 'auto',
 
-		[theme.breakpoints.down('sm')]: {
-			width: '80%'
-		}
-	},
-	subscribe: {
-		'&>.MuiOutlinedInput-root': {
-			height: 40,
-			borderRadius: 30,
-			backgroundColor: '#fff',
-			paddingRight: 0,
-			fontSize: '0.875rem'
-		}
-	},
-	subscribeBtn: {
+	btn1: {
 		'&.MuiButton-root': {
-			borderRadius: 30,
-			backgroundColor: theme.palette.primary.main,
-			fontSize: 'clamp(0.875rem, 1.2vw, 1rem)',
-			color: '#fff',
-			boxShadow: '-2px 0px 4px rgba(0,0,0,.1)',
-			width: 120,
-			height: 40,
-			fontWeight: 600,
+			borderRadius: '30px',
+			height: '60px',
+			width: '170px',
+			background: 'linear-gradient(95.98deg, #058081 -1.26%, #01A2A4 112.07%)',
+			marginRight: '30px',
 
-			'&:hover': {
-				backgroundColor: theme.palette.primary.main,
-				color: '#fff'
+			[theme.breakpoints.down('sm')]: {
+				marginRight: '15px',
+				width: '150px'
 			}
 		}
 	}

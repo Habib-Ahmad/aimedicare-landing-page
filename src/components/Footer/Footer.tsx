@@ -21,20 +21,16 @@ const links = [
 		to: '#features'
 	},
 	{
-		name: 'Telemedicine',
-		to: '#telemedicine'
-	},
-	{
 		name: 'Internet of medical things',
 		to: '#iomt'
 	},
 	{
-		name: 'Artificial intelligence',
-		to: '#ai'
+		name: 'Decentralise ledger technology',
+		to: '#bigData'
 	},
 	{
-		name: 'Decentralise ledger technology',
-		to: '#security'
+		name: 'Contect us',
+		to: '#contact'
 	}
 ];
 

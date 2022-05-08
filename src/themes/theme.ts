@@ -8,16 +8,11 @@ export const theme = createTheme({
 			fontSize: 'clamp(1rem, 1.2vw, 2rem)'
 		},
 
-		h1: {
-			textTransform: 'uppercase',
-			fontSize: 'clamp(1.2rem, 2vw, 4rem)',
-			fontWeight: 700,
-			letterSpacing: '2px',
-
-			'&::first-letter': {
-				fontSize: 'clamp(1.5rem, 2.5vw, 4.2rem)'
-			}
-		},
+		// h1: {
+		// 	fontSize: 'clamp(1.8rem, 2vw, 4rem)',
+		// 	fontWeight: 700,
+		// 	color: '#282C4B'
+		// },
 
 		h2: {
 			fontSize: 'clamp(1.5rem, 2vw, 3rem)',
@@ -62,6 +57,7 @@ export const theme = createTheme({
 				root: {
 					color: '#fff',
 					boxShadow: 'none',
+					textTransform: 'none',
 
 					'&:hover': {
 						boxShadow: 'none'

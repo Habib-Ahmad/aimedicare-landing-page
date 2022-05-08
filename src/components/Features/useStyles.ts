@@ -15,6 +15,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	headingWrapper: {
 		width: '20%',
+		minWidth: '150px',
 		marginRight: '60px',
 
 		[theme.breakpoints.down('sm')]: {
@@ -26,11 +27,11 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	featureWrapper: {
 		display: 'flex',
 		alignItems: 'center',
+		overflowX: 'scroll',
+		overflowY: 'hidden',
 
 		[theme.breakpoints.down('sm')]: {
-			width: '100vw',
-			overflowX: 'scroll',
-			overflowY: 'hidden'
+			width: '100vw'
 		}
 	},
 	feature: {

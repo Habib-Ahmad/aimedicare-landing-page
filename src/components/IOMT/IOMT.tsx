@@ -37,12 +37,12 @@ const IOMT = (): JSX.Element => {
 			<Grid
 				container
 				direction={{ xs: 'column-reverse', md: 'row' }}
-				alignItems="center"
+				alignItems={{ xs: 'normal', md: 'center' }}
 			>
 				<Grid item xs={12} md={8}>
 					<Box className={classes.slide}>
 						<IconButton onClick={handlePrevious} disableRipple>
-							<img src={arrowLeft} alt="Arrow-left" />
+							<img src={arrowLeft} alt="Arrow-left" className={classes.arrow} />
 						</IconButton>
 						<Box className={classes.watchWrapper}>
 							<img src={stats} alt="" className={classes.stats} />
@@ -50,7 +50,11 @@ const IOMT = (): JSX.Element => {
 							<img src={splash} alt="Splash" className={classes.splash} />
 						</Box>
 						<IconButton onClick={handleNext} disableRipple>
-							<img src={arrowRight} alt="Arrow-right" />
+							<img
+								src={arrowRight}
+								alt="Arrow-right"
+								className={classes.arrow}
+							/>
 						</IconButton>
 					</Box>
 				</Grid>
