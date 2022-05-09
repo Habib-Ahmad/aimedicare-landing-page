@@ -60,13 +60,13 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			fontWeight: 400,
 			marginRight: '20px',
 
-			'&::after': {
-				content: "''",
-				width: 20,
-				height: 20,
-				backgroundColor: 'white',
-				borderRadius: '50%'
-			},
+			// '&::after': {
+			// 	content: "''",
+			// 	width: 20,
+			// 	height: 20,
+			// 	backgroundColor: 'white',
+			// 	borderRadius: '50%'
+			// },
 
 			[theme.breakpoints.down('sm')]: {
 				marginRight: 0
