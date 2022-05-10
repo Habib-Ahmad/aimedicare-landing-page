@@ -20,7 +20,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
 	arrow: {
 		[theme.breakpoints.down('md')]: {
-			width: '30px'
+			width: '30px',
+			zIndex: 100
 		}
 	},
 
@@ -43,8 +44,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		zIndex: 100,
 
 		[theme.breakpoints.up('xl')]: {
-			width: '18vw',
-			left: '20%'
+			width: '15vw',
+			top: '-40%',
+			left: '-70%'
 		},
 
 		[theme.breakpoints.down('md')]: {

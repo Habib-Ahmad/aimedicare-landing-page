@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		display: 'flex',
 		alignItems: 'center',
 
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			padding: '12vw 0 0',
 			flexDirection: 'column'
 		}
@@ -16,42 +16,63 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		backgroundColor: theme.palette.secondary.main,
 		padding: '40px 40px 40px 70px',
 
-		[theme.breakpoints.down('sm')]: {
-			padding: '10vw',
+		[theme.breakpoints.down('md')]: {
+			padding: '10vw 5vw',
 			marginBottom: '50px'
 		}
 	},
 	phone: {
 		marginLeft: '-70px',
 
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('lg')]: {
 			marginLeft: 0,
-			width: '210px'
+			maxWidth: '300px'
+		},
+
+		[theme.breakpoints.down('md')]: {
+			marginLeft: 0,
+			maxWidth: '180px'
 		}
 	},
 	arrow: {
 		width: '120px',
 		margin: '-100px 50px 0 -70px',
 
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			margin: '0',
 			width: '80px'
+		},
+
+		[theme.breakpoints.down('sm')]: {
+			width: '50px',
+			marginLeft: '-15px'
 		}
 	},
 	features: {
 		marginBottom: '100px',
 
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			marginBottom: '20px',
 			marginTop: '-30px',
+			marginLeft: '30px',
 			width: '150px'
+		},
+
+		[theme.breakpoints.down('sm')]: {
+			marginLeft: '0px',
+			width: '100px'
 		}
+	},
+	featuresWrapper: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'flex-start'
 	},
 	one: {
 		position: 'absolute',
 		left: '60%',
 
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			display: 'none'
 		}
 	},
@@ -59,9 +80,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		position: 'relative',
 		marginLeft: '-70px',
 
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			marginLeft: 0,
-			padding: '0 10vw'
+			padding: '0 5vw'
 		}
 	},
 	text: {
@@ -71,7 +92,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 			borderLeft: '2px solid #0FA6AA',
 			paddingLeft: '20px',
 
-			[theme.breakpoints.down('sm')]: {
+			[theme.breakpoints.down('md')]: {
 				paddingLeft: 0,
 				borderLeft: 'none',
 				lineHeight: '2rem'

@@ -7,7 +7,7 @@ import one from '../../assets/about/one.svg';
 
 const About = (): JSX.Element => {
 	const classes = useStyles();
-	const isDesktop = useMediaQuery('(min-width: 600px)');
+	const isDesktop = useMediaQuery('(min-width: 900px)');
 
 	if (!isDesktop)
 		return (
@@ -51,7 +51,7 @@ const About = (): JSX.Element => {
 					data-aos="fade-up"
 				>
 					<img src={iPhone} alt="Phone" className={classes.phone} />
-					<Box>
+					<Box className={classes.featuresWrapper}>
 						<img src={features} alt="Features" className={classes.features} />
 						<img src={arrow} alt="Arrow" className={classes.arrow} />
 					</Box>

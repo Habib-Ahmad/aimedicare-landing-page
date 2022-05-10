@@ -29,7 +29,7 @@ const links = [
 		to: '#bigData'
 	},
 	{
-		name: 'Contect us',
+		name: 'Contact us',
 		to: '#contact'
 	}
 ];

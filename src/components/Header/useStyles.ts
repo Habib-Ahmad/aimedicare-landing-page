@@ -40,7 +40,11 @@ export const useStyles = makeStyles((theme: Theme) => ({
 					position: 'absolute',
 					left: '5%',
 					bottom: '-25%',
-					width: '250px'
+					width: '250px',
+
+					[theme.breakpoints.down('sm')]: {
+						width: '150px'
+					}
 				}
 			},
 

@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		height: '10vh',
 
 		[theme.breakpoints.down('md')]: {
-			padding: theme.spacing(0, 3),
+			padding: theme.spacing(1, 3),
 			backgroundColor: theme.palette.secondary.main
 		}
 	},
