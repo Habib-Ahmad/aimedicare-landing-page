@@ -50,6 +50,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	},
 	features: {
 		marginBottom: '100px',
+		width: '300px',
 
 		[theme.breakpoints.down('md')]: {
 			marginBottom: '20px',
@@ -59,8 +60,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		},
 
 		[theme.breakpoints.down('sm')]: {
-			marginLeft: '0px',
-			width: '100px'
+			marginLeft: '0px'
 		}
 	},
 	featuresWrapper: {

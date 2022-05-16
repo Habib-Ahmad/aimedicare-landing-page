@@ -1,7 +1,7 @@
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import { useStyles } from './useStyles';
 import iPhone from '../../assets/about/iPhone.png';
-import features from '../../assets/about/features.png';
+import features from '../../assets/about/features.svg';
 import arrow from '../../assets/about/arrow.svg';
 import one from '../../assets/about/one.svg';
 

@@ -13,7 +13,7 @@ import EarlyAccess from './components/EarlyAccess/EarlyAccess';
 import Contact from './components/Contact/Contact';
 import Partners from './components/Partners/Partners';
 import Footer from './components/Footer/Footer';
-import Eski from './components/Eski';
+// import Eski from './components/Eski';
 import './aos';
 
 const App = (): JSX.Element => {

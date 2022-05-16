@@ -41,18 +41,12 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		width: '250px',
 		top: '-30%',
 		left: '-60%',
-		zIndex: 100,
-
-		[theme.breakpoints.up('xl')]: {
-			width: '15vw',
-			top: '-40%',
-			left: '-70%'
-		},
+		zIndex: 200,
 
 		[theme.breakpoints.down('md')]: {
-			width: '40vw',
-			top: '-60%',
-			left: '-45%'
+			width: '150px',
+			top: '-50%',
+			left: '-35%'
 		}
 	},
 
@@ -60,7 +54,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		width: 'auto',
 		height: '400px',
 
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			height: '200px',
 			margin: '0 30px',
 			zIndex: 100
@@ -73,7 +67,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		zIndex: '-100',
 		width: '450px',
 
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			width: '250px',
 			zIndex: '0'
 		}
@@ -82,7 +76,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 	headingWrapper: {
 		position: 'relative',
 
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			marginLeft: 0,
 			marginBottom: '200px'
 		}
