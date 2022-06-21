@@ -95,6 +95,14 @@ export const useStyles = makeStyles((theme: Theme) => ({
 		}
 	},
 
+	btn2: {
+		'&.MuiButton-root': {
+			'&:hover': {
+				backgroundColor: 'transparent'
+			}
+		}
+	},
+
 	eski: {
 		display: 'none',
 

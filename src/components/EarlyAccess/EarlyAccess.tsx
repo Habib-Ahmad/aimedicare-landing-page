@@ -7,7 +7,7 @@ const EarlyAccess = () => {
 	const classes = useStyles();
 
 	return (
-		<Box className={classes.container}>
+		<Box id="earlyAccess" className={classes.container}>
 			<Box className={classes.header}>
 				<Typography variant="h2">Get early access</Typography>
 				<img src={arrow} alt="" className={classes.img} />
